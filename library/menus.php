@@ -3,9 +3,9 @@
 
 // register a couple nav menus
 register_nav_menus( array(
-	'main-menu' => 'Main Menu',
+	'main-menu' => 'Main',
 	'footer-links' => 'Footer - Links',
-	'footer-resources' => 'Footer - Resources'
+	'footer-programs' => 'Footer - Programs'
 ) );
 
 

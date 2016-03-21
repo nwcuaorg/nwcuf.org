@@ -7,17 +7,22 @@ header {
 
 	.logo {
 		margin-right: 60px;
-		padding: 20px 0 5px 5px;
+		padding: 0 0 10px 20px;
 		max-width: 450px;
+
+		@include respond-to( 768px ) {
+			padding-left: 40px;
+		}
 	}
 
 	nav {
+		@include clearfix;
 		position: relative;
 
 		button {
 			position: absolute;
 			right: 5px;
-			top: -50px;
+			top: -80px;
 			width: 40px;
 			height: 40px;
 			border: 0;
@@ -167,13 +172,12 @@ header {
 
 		@include respond-to( 768px ) {
 			position: absolute;
-			top: 90px;
-			left: 50%;
-			margin-left: 150px;
+			top: 50px;
+			right: 80px;
 		}
 
 		@include respond-to( $menu-bp ) {
-			margin-left: 250px;
+			right: 40px;
 		}
 	}
 
@@ -184,13 +188,12 @@ header {
 		@include respond-to( 768px ) {
 			display: block;
 			position: absolute;
-			top: 30px;
-			left: 50%;
-			margin-left: 150px;
+			top: -10px;
+			right: 90px;
 		}
 
 		@include respond-to( $menu-bp ) {
-			margin-left: 250px;
+			right: 50px;
 		}
 
 		a {

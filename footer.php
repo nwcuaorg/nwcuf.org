@@ -20,9 +20,9 @@
 				<h3>Connect With Us</h3>
 				<p>800.995.9064 Phone<br>
 					877.928.6397 Fax<br>
-					<a href="mailto:strategiclink@nwcua.org">strategiclink@nwcua.org</a></p>
+					<a href="mailto:foundation@nwcua.org">foundation@nwcua.org</a></p>
 
-				<p><strong>Oregon Office:</strong>
+				<p><strong>Oregon Office:</strong><br>
 					13221 SW 68th Pkwy,<br>
 					Suite 400<br>
 					Tigard, OR 97223</p>
@@ -46,10 +46,10 @@
 				</div>
 			</div>
 			<div class="column">
-				<h3>Resources</h3>
+				<h3>Programs</h3>
 				<nav role="navigation">
 					<?php wp_nav_menu( array( 
-						'theme_location' => 'footer-resources', 
+						'theme_location' => 'footer-programs', 
 						'menu_class' => 'nav-menu' ) 
 					); ?>
 				</nav>

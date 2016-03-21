@@ -30,7 +30,15 @@
 				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
 			</a>
 		</div>
-	
+		
+		<div class="nwcua-logo">
+			<a href="http://www.nwcua.org/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-nwcua.png"></a>
+		</div>
+
+		<div class="search">
+			<?php get_search_form(); ?>
+		</div>
+
 	</div>
 
 	<nav role="navigation">
@@ -38,14 +46,6 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
 	</nav>
 	
-	<div class="nwcua-logo">
-		<a href="http://www.nwcua.org/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-nwcua.png"></a>
-	</div>
-
-	<div class="search">
-		<?php get_search_form(); ?>
-	</div>
-
 </header>
 
 <section class="content">

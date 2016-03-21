@@ -1,3 +1,3 @@
-## NWCUA's Strategic Link
+## NWCUF's WordPress Theme
 
-&copy; 2015 NWCUA. All rights reserved.
+&copy; 2016 NWCUF. All rights reserved.
