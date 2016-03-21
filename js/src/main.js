@@ -41,9 +41,6 @@ jQuery(document).ready(function($){
 		$( this ).parent( '.accordion-box' ).children( '.accordion-box-content' ).slideToggle( 600 );
 	});
 
-	// fluid width videos that maintain aspect ratio
-	$( '.content' ).fitVids();
-
 	$( 'button[data-url]' ).click(function(){
 		window.location.href = $( this ).attr( 'data-url' );
 	});

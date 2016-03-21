@@ -2,11 +2,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,300italic,400italic,700italic);
 
-
-@mixin font-title {
-	font-family: Georgia, "Palatino Linotype", serif;
-}
-
 @mixin font {
 	font-family: Lato, sans-serif;
 	font-weight: 300;

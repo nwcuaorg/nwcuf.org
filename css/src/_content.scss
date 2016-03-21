@@ -7,8 +7,6 @@
 
 .content {
 	h1, h2, h3, h4, h5, h6 {
-		font-style: italic;
-		color: $navy;
 		padding: 6px 0;
 	}
 }
@@ -21,6 +19,17 @@
 
 .content-wide {
 	padding: 40px 20px;
+
+	@include respond-to( 1024px ) {
+		padding: 40px;
+	}
+
+	iframe:first-child {
+		@include respond-to( 840px ) {
+			float: right;
+			margin: 0 0 5% 5%;
+		}
+	}
 }
 
 
