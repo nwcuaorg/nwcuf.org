@@ -4,12 +4,22 @@ $icon-width: 70px;
 
 
 .home-sections {
+	@include respond-to( 1024px ) {
+		padding: 0 30px;
+	}
+
 	section {
-		float: left;
-		width: 50%;
-
 		@include respond-to( 500px ) {
+			float: left;
+			width: 50%;
+		}
 
+		@include respond-to( 768px ) {
+			width: 25%;
+		}
+
+		@include respond-to( 1024px ) {
+			padding: 20px 10px;
 		}
 	}
 
