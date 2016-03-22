@@ -18,6 +18,7 @@
 }
 
 .content-wide {
+	@include clearfix;
 	padding: 40px 20px;
 
 	@include respond-to( 1024px ) {
@@ -27,7 +28,7 @@
 	iframe:first-child {
 		@include respond-to( 840px ) {
 			float: right;
-			margin: 0 0 5% 5%;
+			margin: 20px 0 20px 5%;
 		}
 	}
 }
