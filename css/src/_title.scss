@@ -55,8 +55,8 @@
 		}
 
 		h1 {
+			@include font-bold;
 			color: white;
-			font-style: italic;
 			line-height: 1.1em;
 			font-size: 20px;
 
