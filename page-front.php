@@ -15,19 +15,19 @@ get_header();
 		<div class="home-sections">
 			
 			<section>
-				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/home-scholarships.png"></a>
+				<a href="/scholarships-and-grants"><img src="<?php bloginfo('template_url') ?>/img/home-scholarships.png"></a>
 			</section>
 
 			<section>
-				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/home-programs.png"></a>
+				<a href="/programs"><img src="<?php bloginfo('template_url') ?>/img/home-programs.png"></a>
 			</section>
 
 			<section>
-				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/home-donate.png"></a>
+				<a href="/donate"><img src="<?php bloginfo('template_url') ?>/img/home-donate.png"></a>
 			</section>
 
 			<section>
-				<a href="#"><img src="<?php bloginfo('template_url') ?>/img/home-friends.png"></a>
+				<a href="/friends-of-the-foundation"><img src="<?php bloginfo('template_url') ?>/img/home-friends.png"></a>
 			</section>
 
 		</div>
