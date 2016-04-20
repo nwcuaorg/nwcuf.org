@@ -23,7 +23,7 @@ get_header();
 			</section>
 
 			<section>
-				<a href="https://contribute.corduro.com/Corduro.Contribution/content/Contribute.aspx?containerguid=9EBCB14E-6B5B-40AA-9DD8-7FA29A246C3A"><img src="<?php bloginfo('template_url') ?>/img/home-donate.png"></a>
+				<a href="/give-to-nwcuf"><img src="<?php bloginfo('template_url') ?>/img/home-donate.png"></a>
 			</section>
 
 			<section>
