@@ -24,8 +24,8 @@
 	@include respond-to( 1024px ) {
 		padding: 40px;
 	}
-
-	iframe:first-child {
+	
+	&.home iframe:first-child {
 		@include respond-to( 840px ) {
 			float: right;
 			margin: 20px 0 20px 5%;

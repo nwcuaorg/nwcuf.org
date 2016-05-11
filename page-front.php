@@ -35,7 +35,7 @@ get_header();
 	</div>
 	
 	<div class="bg-teal bg-stripes">
-		<div class="wrap content-wide">
+		<div class="wrap content-wide home">
 			<?php 
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post(); 
