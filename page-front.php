@@ -27,7 +27,7 @@ get_header();
 			</section>
 
 			<section>
-				<a href="/friends-of-the-foundation"><img src="<?php bloginfo('template_url') ?>/img/home-friends.png"></a>
+				<a href="/partnerships-and-resources"><img src="<?php bloginfo('template_url') ?>/img/home-friends.png"></a>
 			</section>
 
 		</div>
