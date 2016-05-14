@@ -15,10 +15,12 @@
 	padding: 40px 20px;
 	max-width: 900px;
 	margin: 0 auto;
+	@extend .content-style;
 }
 
 .content-wide {
 	@include clearfix;
+	@extend .content-style;
 	padding: 40px 20px;
 
 	@include respond-to( 1024px ) {
