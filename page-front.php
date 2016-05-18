@@ -27,7 +27,7 @@ get_header();
 			</section>
 
 			<section>
-				<a href="/friends-of-the-foundation"><img src="<?php bloginfo('template_url') ?>/img/home-friends.png"></a>
+				<a href="/partnerships-and-resources"><img src="<?php bloginfo('template_url') ?>/img/home-friends.png"></a>
 			</section>
 
 		</div>
@@ -35,7 +35,7 @@ get_header();
 	</div>
 	
 	<div class="bg-teal bg-stripes">
-		<div class="wrap content-wide">
+		<div class="wrap content-wide home">
 			<?php 
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post(); 
