@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<p>If not, feel free to try searching for what you need below.</p>
 
-			<?php print get_search_form(); ?>
+			<p class="search-form"><?php print get_search_form(); ?></p>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
