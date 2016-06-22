@@ -6,23 +6,20 @@
 get_header(); ?>
 
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<div id="primary" class="site-content">
+		<div id="content" class="site-content content-narrow" role="main">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
-			</header>
+			<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
 
-			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfourteen' ); ?></p>
+			<p>Looking for the <a href="https://nwcuf.org/scholarships-and-grants">scholarships page</a>? Otherwise, feel free to try searching for what you need below.</p>
 
-				<?php get_search_form(); ?>
-			</div><!-- .page-content -->
+			<?php print get_search_form(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+
 get_footer();
+
+?>
