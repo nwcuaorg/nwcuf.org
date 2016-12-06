@@ -35,4 +35,8 @@ include( "library/accordion.php" );
 // include the anthem feed parsing functionality
 include( "library/anthem-feed.php" );
 
+
+// include the friends of the foundation functionality
+include( "library/friends.php");
+
 ?>
