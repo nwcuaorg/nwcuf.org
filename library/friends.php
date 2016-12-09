@@ -32,7 +32,7 @@ function friends_add_confirmation_code( $notification, $form, $entry ) {
 function friends_post_redirect( $entry, $form ) {
 
     // redirect to thanks page.
-    wp_redirect( "/fotf-thanks/?entry=" . $entry['id'], 302 );
+    wp_redirect( "/friends-of-the-foundation/thanks/?entry=" . $entry['id'], 302 );
 }
 
 
