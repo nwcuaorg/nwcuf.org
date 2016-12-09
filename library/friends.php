@@ -37,8 +37,8 @@ function friends_post_redirect( $entry, $form ) {
 
 
 // add both hooks to relevant forms.
-add_filter( 'gform_notification_1', 'friends_add_confirmation_code', 10, 3 );
-add_action( 'gform_after_submission_1', 'friends_post_redirect', 10, 2 );
+add_filter( 'gform_notification_3', 'friends_add_confirmation_code', 10, 3 );
+add_action( 'gform_after_submission_3', 'friends_post_redirect', 10, 2 );
 
 
 ?>
