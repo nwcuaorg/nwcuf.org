@@ -41,8 +41,13 @@ p {
 	padding: 8px 0;
 }
 
-strong {
+strong, b {
 	font-weight: bold;
+}
+
+em strong, strong em, b em, em b {
+	font-weight: bold;
+	font-style: italic;
 }
 
 a {

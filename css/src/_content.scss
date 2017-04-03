@@ -78,9 +78,21 @@
 	text-align: right;
 }
 
-img.aligncenter {
-	display: block;
-	margin: 0 auto;
+img {
+	&.alignleft {
+		float: left;
+		margin: 0 15px 15px 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+
+	&.aligncenter {
+		display: block;
+		margin: 0 auto;
+	}
 }
 
 table {
