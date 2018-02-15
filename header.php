@@ -35,11 +35,11 @@
 		<div class="nwcua-logo">
 			<a href="http://www.nwcua.org/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-nwcua.png"></a>
 		</div>
-		-->
 
 		<div class="search">
 			<?php get_search_form(); ?>
 		</div>
+		-->
 
 	</div>
 
