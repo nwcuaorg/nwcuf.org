@@ -26,6 +26,7 @@ get_header(); ?>
 				<?php
 			endwhile;
 			?>
+				<div class="group"></div>
 			</div>
 
 		</div><!-- #content -->
