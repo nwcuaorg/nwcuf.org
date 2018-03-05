@@ -76,6 +76,7 @@ a {
 
 	@include respond-to( 768px ) {
 		.wp-post-image {
+			max-width: 24%;
 			float: right;
 			margin: 0 0 15px 15px;
 		}	
