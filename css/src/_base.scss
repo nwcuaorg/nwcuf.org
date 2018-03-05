@@ -74,6 +74,13 @@ a {
 		}
 	}
 
+	@include respond-to( 768px ) {
+		.wp-post-image {
+			float: right;
+			margin: 0 0 15px 15px;
+		}	
+	}
+
 	ul {
 		list-style-type: disc;
 	}
