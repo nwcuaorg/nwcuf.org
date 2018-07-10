@@ -11,11 +11,11 @@ function friends_add_confirmation_code( $notification, $form, $entry ) {
 
     // update database to store confirmation code with entry.
     global $wpdb;
-    $wpdb->insert("{$wpdb->prefix}rg_lead_detail", array(
-        'value'         => $confirmation_code,
-        'field_number'  => 18,
-        'lead_id'       => $entry['id'],
-        'form_id'       => $entry['form_id']
+    $wpdb->insert("{$wpdb->prefix}gf_lead_detail", array(
+        'meta_value'  => $confirmation_code,
+        'meta_key'    => 18,
+        'entry_id'    => $entry['id'],
+        'form_id'     => $entry['form_id']
     ));
 
     // replace our special code in the notification email with the confirmation code.
