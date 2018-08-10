@@ -45,16 +45,20 @@ strong, b {
 	font-weight: bold;
 }
 
+em {
+	font-style: italic;
+}
+
 em strong, strong em, b em, em b {
 	font-weight: bold;
 	font-style: italic;
 }
 
 a {
-	color: $navy;
-	text-decoration: none;
+	color: darken( $teal, 20% );
 
 	&:hover {
+		color: $teal;
 		text-decoration: underline;
 	}
 }
