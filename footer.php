@@ -45,11 +45,13 @@
 						'menu_class' => 'nav-menu' ) 
 					); ?>
 				</nav>
+				<!--
 				<div class="social">
 					<a href="https://twitter.com/NWCUF" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-twitter.png"></a>
 					<a href="https://www.facebook.com/nwcua/" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-facebook.png"></a>
 					<a href="https://www.linkedin.com/company/1726440" target="_blank"><img src="<?php bloginfo( 'template_url' ); ?>/img/social-linkedin.png"></a>
 				</div>
+				-->
 			</div>
 			<div class="column">
 				<h3>Programs</h3>
