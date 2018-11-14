@@ -27,7 +27,7 @@ $entry_id = $_REQUEST['entry'];
 			while ( have_posts() ) : the_post(); 
 				the_content();
 				$entry = GFAPI::get_entry( $entry_id );
-				print "<p>Your confirmation code is: " . $entry['18'] . "</p>";
+				if ( isset( $entry['18'] ) ) print "<p>Your confirmation code is: " . $entry['18'] . "</p>";
 			endwhile;
 		endif;
 		?>
