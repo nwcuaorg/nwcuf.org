@@ -77,7 +77,6 @@ get_header();
 			'cat' => $article_cat
 		);
 		$posts_array = get_posts( $args );
-		print_r( $posts_array );
 		if ( !empty( $posts_array ) ) {
 		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
