@@ -1,0 +1,31 @@
+
+
+.impact-stat {
+	@include respond-to( 768px ) {
+		padding: 20px 0;
+	}
+
+	.half {
+		padding: 0 20px;
+	}
+
+	.stat-number {
+		font-size: 60px;
+		line-height: 70px;
+		text-align: center;
+		@include font-bold;
+	}
+
+	.stat-label {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.stat-content {
+		@include respond-to( 768px ) {		
+			border-left: 3px solid rgba( $grey, .2 );
+			padding-left: 30px;
+		}
+	}
+}
+

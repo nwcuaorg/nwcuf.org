@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Pillar Page
+Template Name: Product Page
 */
 
 get_header();
@@ -38,7 +38,7 @@ get_header();
 		<div class="wrap">
 		<?php
 		foreach ( $work as $a_work ) {
-			if ( !empty( $a_work['image'] ) && !empty( $a_work['title'] ) && !empty( $a_work['content'] ) ) { 
+			if ( !empty( $a_work['image'] ) && !empty( $a_work['title'] ) ) { 
 				?>
 		<article class="third">
 			<img src="<?php print $a_work['image'] ?>" />
@@ -70,15 +70,15 @@ get_header();
 	
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 		<div class="wrap">
-			<h2>Impact</h2>
+			<h2>Our Work</h2>
 		</div>
 	</div>
 
-	<div class="footer-articles">
+	<div class="product-articles">
 		<div class="wrap group">
 		<?php 
 		$args = array(
-			'posts_per_page'   => 3,
+			'posts_per_page' => 3,
 		);
 		$posts_array = get_posts( $args );
 		if ( !empty( $posts_array ) ) {
@@ -99,6 +99,26 @@ get_header();
 		?>
 		</div>
 	</div>
+	
+	<?php if ( has_cmb_value( 'stat_number' ) && has_cmb_value( 'stat_label' ) && has_cmb_value( 'stat_content' ) ) { ?>
+	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
+		<div class="wrap">
+			<h2>Impact</h2>
+		</div>
+	</div>
+
+	<div class="impact-stat">
+		<div class="wrap group">
+			<div class="half">
+				<div class="stat-number"><?php show_cmb_value( 'stat_number' ) ?></div>
+				<div class="stat-label"><?php show_cmb_value( 'stat_label' ) ?></div>
+			</div>
+			<div class="half stat-content">
+				<?php print wpautop( get_cmb_value( 'stat_content' ) ); ?>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
 
 <?php 
 

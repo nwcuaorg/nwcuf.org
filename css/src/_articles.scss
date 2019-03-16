@@ -37,3 +37,53 @@
 	}
 }
 
+
+.product-articles {
+	background: lighten( $grey, 45% );
+
+	article {
+		@include clearfix;
+		background: white;
+		border: 10px solid $navy;
+
+		.article-thumbnail {
+			@include respond-to( 768px ) {			
+				float: left;
+				width: 45%;
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+		.article-content {
+			padding: 10px 20px;
+
+			@include respond-to( 768px ) {
+				float: left;
+				width: 55%;
+				padding: 20px 30px;
+			}
+
+			h5 {
+				padding: 5px 0;
+				text-transform: uppercase;
+
+				a {
+					text-decoration: none;
+					color: $grey;
+				}
+			}
+
+			p {
+				font-size: .85em;
+			}
+		}
+		
+		@include respond-to( $menu-bp ) {
+			margin: 20px 1.5%;
+		}
+	}
+}
+

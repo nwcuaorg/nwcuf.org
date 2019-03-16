@@ -89,7 +89,7 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Icon',
         'id'   => CMB_PREFIX . 'large-title-icon',
         'type' => 'file',
-        'desc' => 'Suggested size: 100x100 pixels',
+        'desc' => 'Suggested: 100x100 pixels, transparent background, white icon.',
         'preview_size' => array( 100, 100 )
     ) );
 
@@ -141,7 +141,7 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Icon (#1)',
         'id'   => CMB_PREFIX . 'home_third_1_icon',
         'type' => 'file',
-        'desc' => 'Suggested size: 100x100 pixels',
+        'desc' => 'Suggested: 100x100 pixels, transparent background, white icon.',
         'preview_size' => array( 100, 100 )
     ) );
 
@@ -201,7 +201,7 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Icon (#2)',
         'id'   => CMB_PREFIX . 'home_third_2_icon',
         'type' => 'file',
-        'desc' => 'Suggested size: 100x100 pixels',
+        'desc' => 'Suggested: 100x100 pixels, transparent background, white icon.',
         'preview_size' => array( 100, 100 )
     ) );
 
@@ -261,7 +261,7 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Icon (#3)',
         'id'   => CMB_PREFIX . 'home_third_3_icon',
         'type' => 'file',
-        'desc' => 'Suggested size: 100x100 pixels',
+        'desc' => 'Suggested: 100x100 pixels, transparent background, white icon.',
         'preview_size' => array( 100, 100 )
     ) );
 
@@ -300,7 +300,8 @@ function page_metaboxes( $meta_boxes ) {
     // showcase metabox
     $work_metabox = new_cmb2_box( array(
         'id' => 'work_metabox',
-        'title' => 'Our Work',
+        'title' => 'Columns',
+        'desc' => 'Repeatable content that displays in 3 columns. Has 2 optional buttons per .',
         'object_types' => array( 'page' ), // post type
         'show_on' => array(
             'key' => 'template',
@@ -308,6 +309,12 @@ function page_metaboxes( $meta_boxes ) {
         ),
         'context' => 'normal',
         'priority' => 'high',
+    ) );
+
+    $work_metabox->add_field( array(
+        'name' => 'Section title',
+        'id'   => CMB_PREFIX . 'work_title',
+        'type' => 'text',
     ) );
 
     $work_metabox_group = $work_metabox->add_field( array(
@@ -326,7 +333,7 @@ function page_metaboxes( $meta_boxes ) {
         'id'   => 'image',
         'type' => 'file',
         'preview_size' => array( 100, 100 ),
-        'desc' => 'Suggested size: 100x100 pixels'
+        'desc' => 'Suggested: 100x100 pixels, transparent background, white icon.'
     ) );
 
     $work_metabox->add_group_field( $work_metabox_group, array(
@@ -369,6 +376,40 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Under Button Text',
         'id'   => 'quiet',
         'type' => 'text',
+    ) );
+
+
+
+    // impact statistic metabox
+    $stat_metabox = new_cmb2_box( array(
+        'id' => 'stat_metabox',
+        'title' => 'Impact Statistic',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-product' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $stat_metabox->add_field( array(
+        'name' => 'Number',
+        'id'   => CMB_PREFIX . 'stat_number',
+        'type' => 'text',
+    ) );
+
+    $stat_metabox->add_field( array(
+        'name' => 'Label',
+        'id'   => CMB_PREFIX . 'stat_label',
+        'type' => 'text',
+    ) );
+
+    $stat_metabox->add_field( array(
+        'name' => 'Content',
+        'id'   => CMB_PREFIX . 'stat_content',
+        'type' => 'textarea',
+        'desc' => 'Displayed in the right column.'
     ) );
 
 
