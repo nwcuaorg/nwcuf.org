@@ -74,7 +74,7 @@ function page_metaboxes( $meta_boxes ) {
     $title_metabox = new_cmb2_box( array(
         'id' => 'title_metabox',
         'title' => 'Large Title',
-        'object_types' => array( 'page', 'product' ), // post type
+        'object_types' => array( 'page' ), // post type
         'context' => 'normal',
         'priority' => 'high',
     ));
@@ -304,7 +304,7 @@ function page_metaboxes( $meta_boxes ) {
         'object_types' => array( 'page' ), // post type
         'show_on' => array(
             'key' => 'template',
-            'value' => array( 'page-work' )
+            'value' => array( 'page-pillar', 'page-product' )
         ),
         'context' => 'normal',
         'priority' => 'high',
