@@ -30,5 +30,5 @@
 
 
 @mixin wrap-main {
-	@include wrap( 1220px );
+	@include wrap( $menu-bp-large );
 }

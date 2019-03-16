@@ -4,10 +4,10 @@ get_header();
 
 ?>
 
+	<?php the_showcase(); ?>
+
 	<?php the_large_title(); ?>
 
-	<?php the_showcase(); ?>
-	
 	<?php if ( has_cmb_value( 'left_content' ) ) { ?>
 	<div id="content" class="wrap group content-two-column" role="main">
 		<div class="three-quarter">

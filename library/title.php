@@ -8,14 +8,14 @@ function the_large_title() {
 		?>
 		<div class="large-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 			<div class="wrap">
-				<?php if ( has_cmb_value( 'large-title-icon' ) ) { ?>
-				<div class="large-title-icon bg-<?php show_cmb_value( 'large-title-color' ) ?>">
-					<img src="<?php show_cmb_value( 'large-title-icon' ) ?>">
-				</div>
-				<?php } ?>
-				<div class="large-title-text">
-					<h1><?php show_cmb_value( 'large-title' ) ?></h1>
-				</div>
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+					<?php if ( has_cmb_value( 'large-title-icon' ) ) { ?>
+						<td valign="center" class="large-title-icon"><img src="<?php show_cmb_value( 'large-title-icon' ) ?>"></td>
+					<?php } ?>
+						<td valign="center" class="large-title-text"><h1><?php show_cmb_value( 'large-title' ) ?></h1></td>
+					</tr>
+				</table>
 			</div>
 		</div>
 		<?php

@@ -1,0 +1,89 @@
+
+
+.content-work {
+	background: lighten( $grey, 50% );
+	color: darken( $grey, 10% );
+}
+
+
+.work-title {
+	.wrap {
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	h2 {
+		position: relative;
+		display: inline;
+		margin: 0 auto;
+		text-transform: uppercase;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -105px;
+			width: 90px;
+			height: 1px;
+			background: rgba( white, .5 );
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: -105px;
+			width: 90px;
+			height: 1px;
+			background: rgba( white, .5 );
+		}
+	}
+}
+
+
+.our-work {
+	padding: 20px 0;
+
+	article {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	
+	.content {
+		padding: 10px 30px;
+	}
+
+	.buttons {
+		a {
+			display: inline-block;
+			margin: 0 auto;
+			padding: 7px 15px;
+			margin-top: 10px;
+			text-decoration: none;
+			text-transform: uppercase;
+			opacity: 1;
+			transition: opacity 400ms ease-in-out;
+			@include font-medium;
+
+			&:hover {
+				color: white;
+				opacity: .8;
+			}
+
+			&.orange {
+				background: $orange;
+				color: black;
+
+				&:hover {
+					color: black;
+				}
+			}
+		}
+	}
+
+	.quiet {
+		display: inline-block;
+		color: $grey;
+		margin-top: 5px;
+	}
+}

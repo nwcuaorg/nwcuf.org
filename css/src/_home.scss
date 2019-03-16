@@ -4,28 +4,112 @@ $icon-width: 70px;
 
 
 .home-sections {
-	@include respond-to( 1024px ) {
-		padding: 0 30px;
-	}
-
+	background: rgba( $grey, .6 );
+	
 	section {
-		@include respond-to( 500px ) {
-			float: left;
-			width: 50%;
+		background: white;
+		color: white;
+		text-align: center;
+		
+		a {
+			color: white;
+			text-decoration: none;
 		}
 
 		@include respond-to( 768px ) {
-			width: 25%;
+			float: left;
+			width: 33%;
+
+			&.second {
+				width: 34%;
+			}
 		}
 
-		@include respond-to( 1024px ) {
-			padding: 20px 10px;
+		@include respond-to( $menu-bp-large ) {
+			width: 400px;
 		}
-	}
 
-	img {
-		width: 100%;
-		display: block;
+		.solid {
+			padding: 20px;
+
+			h3 {
+				text-transform: uppercase;
+				font-size: 1.4em;
+			}
+
+			@include respond-to( 768px ) {
+				height: 280px;
+			}
+
+			@include respond-to( $menu-bp ) {
+				height: 300px;
+				font-size: 1.5em;
+			}
+		}
+
+		.semi {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+		.light {
+			padding: 10px 20px 20px;
+
+			h2 {
+				@include font-bold;
+				font-size: 65px;
+				line-height: 65px;
+			}
+
+			p {
+				padding: 0;
+			}
+			
+			@include respond-to( 768px ) {
+				height: 160px;
+			}
+
+			@include respond-to( $menu-bp ) {
+
+			}
+		}
+		
+		@include respond-to( 768px ) {
+			position: relative;
+	
+			&:before {
+				content: '';
+				position: absolute;
+				top: -50px;
+				left: 0;
+				right: 0;
+				height: 50px;
+				background: rgba( $grey, .4 );
+				z-index: 900;
+			}
+		}
+	
+		&.navy {
+			.solid { background: $navy; }
+			.solid:after, .solid:before { background: $navy; }
+			.semi { background: rgba( $navy, .5 ); }
+			.light { background: rgba( $navy, .2 ); color: $navy; }
+			&:before { background: rgba( $navy, .6 ); }
+		}
+
+		&.lime {
+			.solid { background: $lime; }
+			.semi { background: rgba( $lime, .6 ); }
+			.light { background: rgba( $lime, .2 ); color: $lime; }
+			&:before { background: rgba( $lime, .6 ); }
+		}
+
+		&.teal {
+			.solid { background: $teal; }
+			.semi { background: rgba( $teal, .6 ); }
+			.light { background: rgba( $teal, .2 ); color: $teal; }
+			&:before { background: rgba( $teal, .6 ); }
+		}
 	}
 }
 

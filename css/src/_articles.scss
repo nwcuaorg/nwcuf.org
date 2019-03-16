@@ -1,0 +1,39 @@
+
+
+.footer-articles {
+	background: lighten( $grey, 45% );
+
+	article {
+		background: white;
+		border: 10px solid $navy;
+
+		.article-thumbnail {
+			max-height: 200px;
+			overflow: hidden;
+		}
+
+		.article-content {
+			padding: 10px 20px;
+
+			h5 {
+				padding: 5px 0;
+			}
+
+			p {
+				font-size: .85em;
+			}
+		}
+
+		@include respond-to( 768px ) {
+			float: left;
+			width: 30.3%;
+			margin: 10px 1.5%;
+			min-height: 400px;
+		}
+		
+		@include respond-to( $menu-bp ) {
+			margin: 20px 1.5%;
+		}
+	}
+}
+

@@ -61,4 +61,19 @@ function the_showcase() {
 }
 
 
+add_filter('body_class','krogs_custom_field_body_class');
+function krogs_custom_field_body_class( $classes ) {
+	$slides = get_post_meta( get_the_ID(), CMB_PREFIX . "showcase", 1 );
+
+	if ( !empty( $slides ) ) {
+		$classes[] = 'has-showcase';
+	} else {
+		$classes[] = 'no-showcase';
+	}
+	
+	// return the $classes array
+	return $classes;
+}
+
+
 ?>

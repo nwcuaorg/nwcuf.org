@@ -23,30 +23,24 @@
 
 <header>
 
-	<div class="wrap">
+	<div class="wrap group">
 
 		<div class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
 			</a>
 		</div>
-		
-		<!--
-		<div class="nwcua-logo">
-			<a href="http://www.nwcua.org/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-nwcua.png"></a>
-		</div>
 
-		<div class="search">
-			<?php get_search_form(); ?>
-		</div>
-		-->
+		<nav role="navigation" class="menu">
+			<button class="menu-toggle"><i class="fa fa-bars"></i></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+		</nav>
+
+		<nav role="buttons" class="buttons group">
+			<a href="/donate">Donate</a>
+		</nav>
 
 	</div>
-
-	<nav role="navigation">
-		<button class="menu-toggle"><i class="fa fa-bars"></i></button>
-		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
-	</nav>
 	
 </header>
 

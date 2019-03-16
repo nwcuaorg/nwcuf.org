@@ -17,45 +17,9 @@ function page_metaboxes( $meta_boxes ) {
     // set up the colors
     $colors = array(
         'teal' => 'Teal',
-        'river' => 'River',
         'navy' => 'Navy',
-        'forest' => 'Forest',
-        'lime' => 'Lime',
-        'orange' => 'Orange',
-        'grey-light' => 'Grey - Light',
-        'grey-dark' => 'Grey - Dark',
+        'lime' => 'Lime'
     );
-
-
-    // showcase metabox
-    $title_metabox = new_cmb2_box( array(
-        'id' => 'title_metabox',
-        'title' => 'Large Title',
-        'object_types' => array( 'page', 'product' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-    ));
-
-    $title_metabox->add_field( array(
-        'name' => 'Title',
-        'id'   => CMB_PREFIX . 'large-title',
-        'type' => 'text',
-    ) );
-
-    $title_metabox->add_field( array(
-        'name' => 'Icon',
-        'id'   => CMB_PREFIX . 'large-title-icon',
-        'type' => 'file',
-        'preview_size' => array( 30, 30 )
-    ) );
-
-    $title_metabox->add_field( array(
-        'name' => 'Color',
-        'id'   => CMB_PREFIX . 'large-title-color',
-        'type' => 'select',
-        'default' => 'teal',
-        'options' => $colors
-    ) );
 
 
 
@@ -63,11 +27,7 @@ function page_metaboxes( $meta_boxes ) {
     $showcase_metabox = new_cmb2_box( array(
         'id' => 'showcase_metabox',
         'title' => 'Showcase',
-        'object_types' => array( 'page', 'partner' ), // post type
-        'show_on' => array(
-            'key' => 'template',
-            'value' => array( '', 'page-front' )
-        ),
+        'object_types' => array( 'page' ), // post type
         'context' => 'normal',
         'priority' => 'high',
     ) );
@@ -111,26 +71,309 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // showcase metabox
-    $left_metabox = new_cmb2_box( array(
-        'id' => 'left_metabox',
-        'title' => 'Left Column',
+    $title_metabox = new_cmb2_box( array(
+        'id' => 'title_metabox',
+        'title' => 'Large Title',
         'object_types' => array( 'page', 'product' ), // post type
         'context' => 'normal',
         'priority' => 'high',
-        'show_names' => false, // Show field names on the left
     ));
 
-    $left_metabox->add_field( array(
-        'name' => 'Left Column Content',
-        'description' => 'Enter text or ads for the left column.',
-        'id'   => CMB_PREFIX . 'left_content',
-        'type' => 'wysiwyg',
-        'options' => array( 'textarea_rows' => 7 )
+    $title_metabox->add_field( array(
+        'name' => 'Title',
+        'id'   => CMB_PREFIX . 'large-title',
+        'type' => 'text',
+    ) );
+
+    $title_metabox->add_field( array(
+        'name' => 'Icon',
+        'id'   => CMB_PREFIX . 'large-title-icon',
+        'type' => 'file',
+        'desc' => 'Suggested size: 100x100 pixels',
+        'preview_size' => array( 100, 100 )
+    ) );
+
+    $title_metabox->add_field( array(
+        'name' => 'Color',
+        'id'   => CMB_PREFIX . 'large-title-color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
     ) );
 
 
 
+    // accordion metabox
+    $home_thirds_metabox = new_cmb2_box( array(
+        'id' => 'home_thirds_metabox',
+        'title' => 'Home Thirds',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( "page-front" )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
 
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Left Column',
+        'desc' => 'Enter the contents of the left column.',
+        'type' => 'title',
+        'id'   => CMB_PREFIX . 'home_third_1_section',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Color (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Link URL (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_url',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Icon (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_icon',
+        'type' => 'file',
+        'desc' => 'Suggested size: 100x100 pixels',
+        'preview_size' => array( 100, 100 )
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Title (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_title',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Subtitle (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_subtitle',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Title (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_stat_title',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Number (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_stat_number',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Label (#1)',
+        'id'   => CMB_PREFIX . 'home_third_1_stat_label',
+        'type' => 'text',
+    ) );
+
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Center Column',
+        'desc' => 'Enter the contents of the center column.',
+        'type' => 'title',
+        'id'   => CMB_PREFIX . 'home_third_2_section',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Color (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Link URL (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_url',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Icon (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_icon',
+        'type' => 'file',
+        'desc' => 'Suggested size: 100x100 pixels',
+        'preview_size' => array( 100, 100 )
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Title (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_title',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Subtitle (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_subtitle',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Title (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_stat_title',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Number (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_stat_number',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Label (#2)',
+        'id'   => CMB_PREFIX . 'home_third_2_stat_label',
+        'type' => 'text',
+    ) );
+
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Right Column',
+        'desc' => 'Enter the contents of the right column.',
+        'type' => 'title',
+        'id'   => CMB_PREFIX . 'home_third_3_section',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Color (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Link URL (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_url',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Icon (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_icon',
+        'type' => 'file',
+        'desc' => 'Suggested size: 100x100 pixels',
+        'preview_size' => array( 100, 100 )
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Title (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_title',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Subtitle (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_subtitle',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Title (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_stat_title',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Number (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_stat_number',
+        'type' => 'text',
+    ) );
+
+    $home_thirds_metabox->add_field( array(
+        'name' => 'Statistic Label (#3)',
+        'id'   => CMB_PREFIX . 'home_third_3_stat_label',
+        'type' => 'text',
+    ) );
+
+
+
+    // showcase metabox
+    $work_metabox = new_cmb2_box( array(
+        'id' => 'work_metabox',
+        'title' => 'Our Work',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-work' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $work_metabox_group = $work_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'work',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Item', 'cmb2'),
+            'remove_button' => __('Remove Item', 'cmb2'),
+            'group_title'   => __( 'Item {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Image/Video',
+        'id'   => 'image',
+        'type' => 'file',
+        'preview_size' => array( 100, 100 ),
+        'desc' => 'Suggested size: 100x100 pixels'
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'textarea',
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Orange Button Text',
+        'id'   => 'orange_text',
+        'type' => 'text',
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Orange Button Link',
+        'id'   => 'orange_link',
+        'type' => 'text',
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Second Button Text',
+        'id'   => 'second_text',
+        'type' => 'text',
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Second Button Link',
+        'id'   => 'second_link',
+        'type' => 'text',
+    ) );
+
+    $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Under Button Text',
+        'id'   => 'quiet',
+        'type' => 'text',
+    ) );
+
+
+
+    /*
     // select all products
     $args = array( 'post_type' => 'product', 'posts_per_page' => -1, 'orderby' => 'name', 'order' => 'ASC' );
     $loop = new WP_Query( $args );
@@ -437,6 +680,7 @@ function page_metaboxes( $meta_boxes ) {
         'type' => 'file',
         'preview_size' => array( 768, 90 )
     ) );
+    */
 
 }
 add_filter( 'cmb2_init', 'page_metaboxes' );
@@ -457,8 +701,9 @@ function has_cmb_value( $field ) {
 
 
 // get CMB value
-function show_cmb_value( $field ) {
-    print get_cmb_value( $field );
+function show_cmb_value( $field, $default='' ) {
+    $val = get_cmb_value( $field );
+    print ( !empty( $val ) ? $val : $default );
 }
 
 

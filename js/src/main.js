@@ -44,6 +44,17 @@ jQuery(document).ready(function($){
 	$( 'button[data-url]' ).click(function(){
 		window.location.href = $( this ).attr( 'data-url' );
 	});
+
+	$(window).on('scroll', function() {
+	    scrollPosition = $(this).scrollTop();
+	    if (scrollPosition >= 250) {
+	    	// if scrolled past threshold, add 'scrolled' class
+	        $('header').addClass('scrolled');
+	    } else {
+	    	// otherwise, remove the class
+	    	$('header').removeClass('scrolled');
+	    }
+	});
 	
 });
 

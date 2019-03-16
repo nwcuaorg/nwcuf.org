@@ -1,41 +1,26 @@
 
 
 footer {
-	background: $grey url(../img/bg-waves.png) center center no-repeat;
-	background-size: cover;
+	border-top: 10px solid rgba( $grey, .4 );
+	background: rgba( $grey, .6 );
 	color: white;
 	@include clearfix;
-
-	.column {
-		padding: 20px;
-
-		@include respond-to( 768px ) {
-			float: left;
-			width: 33%;
-			border-left: 4px solid white;
-			min-height: 470px;
-
-			&.first {
-				width: 32%;
-				border-left: 0;
-			}
-		}
-
-		@include respond-to( 1024px ) {
-			padding: 30px 40px;
-		}
-	}
 	
 	h3 {
-		@include font;
+		@include font-bold;
 		text-transform: uppercase;
-		font-size: 1.6em;
+		font-size: 1.4em;
 		line-height: 1.2em;
+		padding-top: 20px;
 	}
 
 	a {
 		color: white;
 		text-decoration: none;
+
+		&:hover {
+			color: white;
+		}
 	}
 
 	nav {
@@ -43,11 +28,43 @@ footer {
 			display: block;
 			padding: 3px;
 		}
+
+		ul.sub-menu {
+			display: none;
+		}
 	}
 
 	.social {
 		padding: 10px 0;
 		text-align: center;
+	}
+
+	.third {
+		@include respond-to( 768px ) {
+			position: relative;
+
+			&:after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: -25px;
+				top: 30px;
+				width: 1px;
+				background: white;
+			}
+		}
+	}
+
+	.two-third {
+		.column {
+			padding: 0;
+
+			@include respond-to( 768px ) {
+				width: 50%;
+				float: left;
+				padding: 20px 20px 20px 0;
+			}
+		}
 	}
 }
 

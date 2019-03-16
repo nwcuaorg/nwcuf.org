@@ -3,16 +3,22 @@
 // set colors
 $teal: #71CACB;
 $river: #076E92;
-$navy: #0F4469;
+$navy: #0E446D;
 $orange: #FCB416;
-$lime: #83A53E;
+$lime: #73A341;
 $forest: #6E8E5F;
 $green: #73A341;
-$grey: #9C9FA0;
+$grey: #606060;
+$grey-lignt: lighten( $grey, 30% );
 $grey-dark: darken( $grey, 30% );
 
 // link color
 $link-color: $teal;
+
+
+$menu-bp: 1024px;
+$menu-bp-large: 1200px;
+
 
 // text and background colors
 @import "colors";
@@ -41,6 +47,8 @@ $link-color: $teal;
 @import "content";
 @import "accordion";
 @import "matchup";
+@import "work";
+@import "articles";
 
 
 // sidebar styles
