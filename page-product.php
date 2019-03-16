@@ -77,6 +77,7 @@ get_header();
 			'cat' => $article_cat
 		);
 		$posts_array = get_posts( $args );
+		print_r( $posts_array );
 		if ( !empty( $posts_array ) ) {
 		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
@@ -96,8 +97,9 @@ get_header();
 					<img src="<?php print get_the_post_thumbnail_url( $a_post->ID, 'post-thumbnail' ); ?>" />
 				</div>
 				<div class="article-content">
-					<h5><a href="<?php print $a_post->guid ?>"><?php print $a_post->post_title ?></a></h5>
-					<p><?php print $a_post->post_excerpt; ?></p>
+					<h5><a href="<?php print get_permalink( $a_post->ID ); ?>"><?php print $a_post->post_title ?></a></h5>
+					<p><?php print wp_trim_words( wpautop( $a_post->post_content ), 100, '...' ); ?></p>
+					<p><a href="<?php print get_permalink( $a_post->ID ); ?>">Read more &raquo;</a></p>
 				</div>
 			</article>
 				<?php 
