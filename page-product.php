@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Product Page
+Template Name: Product
 */
 
 get_header();
@@ -38,11 +38,11 @@ get_header();
 		<div class="wrap">
 		<?php
 		foreach ( $work as $a_work ) {
-			if ( !empty( $a_work['image'] ) && !empty( $a_work['title'] ) ) { 
+			if ( !empty( $a_work['image'] ) ) { 
 				?>
 		<article class="third">
 			<img src="<?php print $a_work['image'] ?>" />
-			<h4><?php print $a_work['title'] ?></h4>
+			<?php if ( !empty( $a_work['title'] ) ) { ?><h4><?php print $a_work['title'] ?></h4><?php } ?>
 			<?php if ( !empty( $a_work['content'] ) ) { ?>
 			<p class="content"><?php print $a_work['content'] ?></p>
 			<?php } ?>

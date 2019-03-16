@@ -30,6 +30,7 @@ include( "library/metabox.php" );
 include( "library/title.php" );
 include( "library/showcase.php" );
 include( "library/accordion.php" );
+include( "library/monolith.php" );
 
 
 // include the anthem feed parsing functionality

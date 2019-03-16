@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Pillar Page
+Template Name: Pillar
 */
 
 get_header();

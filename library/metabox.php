@@ -301,7 +301,7 @@ function page_metaboxes( $meta_boxes ) {
     $work_metabox = new_cmb2_box( array(
         'id' => 'work_metabox',
         'title' => 'Columns',
-        'desc' => 'Repeatable content that displays in 3 columns. Has 2 optional buttons per .',
+        'desc' => 'Repeatable content that displays in 3 columns. Has 2 optional buttons per item.',
         'object_types' => array( 'page' ), // post type
         'show_on' => array(
             'key' => 'template',
@@ -329,7 +329,7 @@ function page_metaboxes( $meta_boxes ) {
     ) );
 
     $work_metabox->add_group_field( $work_metabox_group, array(
-        'name' => 'Image/Video',
+        'name' => 'Image',
         'id'   => 'image',
         'type' => 'file',
         'preview_size' => array( 100, 100 ),
@@ -373,6 +373,297 @@ function page_metaboxes( $meta_boxes ) {
     ) );
 
     $work_metabox->add_group_field( $work_metabox_group, array(
+        'name' => 'Under Button Text',
+        'id'   => 'quiet',
+        'type' => 'text',
+    ) );
+
+
+
+    // showcase metabox
+    $columns_1_metabox = new_cmb2_box( array(
+        'id' => 'columns_1_metabox',
+        'title' => 'Columns (First Section)',
+        'desc' => 'Repeatable content that displays in 3 columns with a wysiwyg before.',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-monolith' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $columns_1_metabox->add_field( array(
+        'name' => 'Section title',
+        'id'   => CMB_PREFIX . 'columns_1_title',
+        'type' => 'text',
+    ) );
+
+    $columns_1_metabox->add_field( array(
+        'name' => 'Section Color',
+        'id'   => CMB_PREFIX . 'columns_1_color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
+    ) );
+
+    $columns_1_metabox->add_field( array(
+        'name' => 'Section Content',
+        'id'   => CMB_PREFIX . 'columns_1_content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $columns_1_metabox_group = $columns_1_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'columns_1',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Item', 'cmb2'),
+            'remove_button' => __('Remove Item', 'cmb2'),
+            'group_title'   => __( 'Item {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Image',
+        'id'   => 'image',
+        'type' => 'file',
+        'preview_size' => array( 100, 100 ),
+        'desc' => 'Suggested: 100x100 pixels, transparent background, grey icon - or a photo.'
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Orange Button Text',
+        'id'   => 'orange_text',
+        'type' => 'text',
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Orange Button Link',
+        'id'   => 'orange_link',
+        'type' => 'text',
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Second Button Text',
+        'id'   => 'second_text',
+        'type' => 'text',
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Second Button Link',
+        'id'   => 'second_link',
+        'type' => 'text',
+    ) );
+
+    $columns_1_metabox->add_group_field( $columns_1_metabox_group, array(
+        'name' => 'Under Button Text',
+        'id'   => 'quiet',
+        'type' => 'text',
+    ) );
+
+
+
+    // showcase metabox
+    $columns_2_metabox = new_cmb2_box( array(
+        'id' => 'columns_2_metabox',
+        'title' => 'Columns (Second Section)',
+        'desc' => 'Repeatable content that displays in 3 columns with a wysiwyg before.',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-monolith' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $columns_2_metabox->add_field( array(
+        'name' => 'Section title',
+        'id'   => CMB_PREFIX . 'columns_2_title',
+        'type' => 'text',
+    ) );
+
+    $columns_2_metabox->add_field( array(
+        'name' => 'Section Color',
+        'id'   => CMB_PREFIX . 'columns_2_color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
+    ) );
+
+    $columns_2_metabox->add_field( array(
+        'name' => 'Section Content',
+        'id'   => CMB_PREFIX . 'columns_2_content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $columns_2_metabox_group = $columns_2_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'columns_2',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Item', 'cmb2'),
+            'remove_button' => __('Remove Item', 'cmb2'),
+            'group_title'   => __( 'Item {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Image',
+        'id'   => 'image',
+        'type' => 'file',
+        'preview_size' => array( 100, 100 ),
+        'desc' => 'Suggested: 100x100 pixels, transparent background, grey icon - or a photo.'
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Orange Button Text',
+        'id'   => 'orange_text',
+        'type' => 'text',
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Orange Button Link',
+        'id'   => 'orange_link',
+        'type' => 'text',
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Second Button Text',
+        'id'   => 'second_text',
+        'type' => 'text',
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Second Button Link',
+        'id'   => 'second_link',
+        'type' => 'text',
+    ) );
+
+    $columns_2_metabox->add_group_field( $columns_2_metabox_group, array(
+        'name' => 'Under Button Text',
+        'id'   => 'quiet',
+        'type' => 'text',
+    ) );
+
+
+
+    // showcase metabox
+    $columns_3_metabox = new_cmb2_box( array(
+        'id' => 'columns_3_metabox',
+        'title' => 'Columns (Third Section)',
+        'desc' => 'Repeatable content that displays in 3 columns with a wysiwyg before.',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-monolith' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $columns_3_metabox->add_field( array(
+        'name' => 'Section title',
+        'id'   => CMB_PREFIX . 'columns_3_title',
+        'type' => 'text',
+    ) );
+
+    $columns_3_metabox->add_field( array(
+        'name' => 'Section Color',
+        'id'   => CMB_PREFIX . 'columns_3_color',
+        'type' => 'select',
+        'default' => 'teal',
+        'options' => $colors
+    ) );
+
+    $columns_3_metabox->add_field( array(
+        'name' => 'Section Content',
+        'id'   => CMB_PREFIX . 'columns_3_content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $columns_3_metabox_group = $columns_3_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'columns_3',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Item', 'cmb2'),
+            'remove_button' => __('Remove Item', 'cmb2'),
+            'group_title'   => __( 'Item {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Image',
+        'id'   => 'image',
+        'type' => 'file',
+        'preview_size' => array( 100, 100 ),
+        'desc' => 'Suggested: 100x100 pixels, transparent background, grey icon - or a photo.'
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
+        'type' => 'wysiwyg',
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Orange Button Text',
+        'id'   => 'orange_text',
+        'type' => 'text',
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Orange Button Link',
+        'id'   => 'orange_link',
+        'type' => 'text',
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Second Button Text',
+        'id'   => 'second_text',
+        'type' => 'text',
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
+        'name' => 'Second Button Link',
+        'id'   => 'second_link',
+        'type' => 'text',
+    ) );
+
+    $columns_3_metabox->add_group_field( $columns_3_metabox_group, array(
         'name' => 'Under Button Text',
         'id'   => 'quiet',
         'type' => 'text',
