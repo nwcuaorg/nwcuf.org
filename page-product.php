@@ -65,9 +65,20 @@ get_header();
 		</div>
 	</div>
 	<?php
-		}
-		?>
+	}
+	?>
 	
+	<?php
+	$cats = get_the_category();
+	if ( !empty( $cats ) ) {
+		$article_cat = $cats[0]->term_id;
+		$args = array(
+			'posts_per_page' => 1,
+			'cat' => $article_cat
+		);
+		$posts_array = get_posts( $args );
+		if ( !empty( $posts_array ) ) {
+		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 		<div class="wrap">
 			<h2>Our Work</h2>
@@ -77,10 +88,6 @@ get_header();
 	<div class="product-articles">
 		<div class="wrap group">
 		<?php 
-		$args = array(
-			'posts_per_page' => 3,
-		);
-		$posts_array = get_posts( $args );
 		if ( !empty( $posts_array ) ) {
 			foreach ( $posts_array as $a_post ) {
 				?>
@@ -99,6 +106,10 @@ get_header();
 		?>
 		</div>
 	</div>
+		<?php 
+		}
+	}
+	?>
 	
 	<?php if ( has_cmb_value( 'stat_number' ) && has_cmb_value( 'stat_label' ) && has_cmb_value( 'stat_content' ) ) { ?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">

@@ -381,6 +381,30 @@ function page_metaboxes( $meta_boxes ) {
 
 
     // impact statistic metabox
+    $article_tag_metabox = new_cmb2_box( array(
+        'id' => 'article_cat_metabox',
+        'title' => 'Article Category',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-product', 'page-pillar' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $article_tag_metabox->add_field( array(
+        'name'           => 'Category',
+        'desc'           => 'Select a post category to output articles.',
+        'id'             => CMB_PREFIX . 'article_cat',
+        'taxonomy'       => 'category', //Enter Taxonomy Slug
+        'type'           => 'taxonomy_select',
+        'remove_default' => 'true' // Removes the default metabox provided by WP core.
+    ) );
+
+
+
+    // impact statistic metabox
     $stat_metabox = new_cmb2_box( array(
         'id' => 'stat_metabox',
         'title' => 'Impact Statistic',

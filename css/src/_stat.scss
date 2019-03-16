@@ -5,6 +5,10 @@
 		padding: 20px 0;
 	}
 
+	@include respond-to( $menu-bp ) {
+		padding: 40px 0;
+	}
+
 	.half {
 		padding: 0 20px;
 	}

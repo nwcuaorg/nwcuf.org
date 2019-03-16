@@ -82,7 +82,7 @@
 		}
 		
 		@include respond-to( $menu-bp ) {
-			margin: 20px 1.5%;
+			margin: 20px 1.5% 40px;
 		}
 	}
 }
