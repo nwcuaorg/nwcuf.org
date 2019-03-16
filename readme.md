@@ -1,3 +1,3 @@
 ## NWCUF's WordPress Theme
 
-&copy; 2016 NWCUF. All rights reserved.
+&copy; 2019 NWCUF. All rights reserved.
