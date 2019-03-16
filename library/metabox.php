@@ -345,7 +345,7 @@ function page_metaboxes( $meta_boxes ) {
     $work_metabox->add_group_field( $work_metabox_group, array(
         'name' => 'Content',
         'id'   => 'content',
-        'type' => 'textarea',
+        'type' => 'wysiwyg',
     ) );
 
     $work_metabox->add_group_field( $work_metabox_group, array(
