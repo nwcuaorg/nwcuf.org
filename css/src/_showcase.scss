@@ -47,8 +47,11 @@
 			width: 100%;
 			height: auto !important;
 			display: block;
-			position: absolute;
-			top: 0;
+			
+			@include respond-to( 768px ) {
+				position: absolute;
+				top: 0;
+			}
 		}
 		
 		.wrap {
@@ -60,6 +63,23 @@
 			padding: 40px 20px;
 			text-align: center;
 			position: relative;
+			
+			h1 {
+				font-weight: 700;
+				padding: 0;
+				@include font-medium;
+				text-transform: uppercase;
+				color: black;
+
+				font-size: 25px;
+				@include respond-to( 768px ) { font-size: 30px; }
+				@include respond-to( 768px ) { font-size: 40px; }
+			
+				body.home & {
+					font-size: 18px;
+					@include respond-to( 768px ) { font-size: 30px; }
+				}
+			}
 
 			&:before {
 				position: absolute;
@@ -92,17 +112,11 @@
 					right: 15%;					
 				}
 			}
-		}
-		
-		h1 {
-			font-weight: 700;
-			padding: 0;
-			@include font-medium;
-			text-transform: uppercase;
-			color: black;
-
-			font-size: 18px;
-			@include respond-to( 768px ) { font-size: 30px; }
+			
+			@include respond-to( $menu-bp ) {
+				left: 60%;
+				right: 30px;
+			}
 		}
 	}
 

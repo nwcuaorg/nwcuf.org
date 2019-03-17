@@ -8,7 +8,10 @@ header {
 
 	.wrap {
 		position: relative;
-		padding: 0 20px;
+
+		@include respond-to( 768px ) {
+			padding: 0 20px;
+		}
 	}
 
 	@include respond-to( $menu-bp ) {
@@ -61,7 +64,7 @@ header {
 		}
 
 		@include respond-to( $menu-bp-large ) {
-			left: 20%;
+			left: 175px;
 		}
 
 		button {
@@ -182,6 +185,12 @@ header {
 			left: 80%;
 			text-align: center;
 			padding: 32px 0;
+		}
+
+		@include respond-to( $menu-bp-large ) {
+			left: auto;
+			right: 20px;
+			width: 150px;
 		}
 
 		a {
