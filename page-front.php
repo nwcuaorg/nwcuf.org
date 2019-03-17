@@ -81,6 +81,7 @@ get_header();
 		<?php 
 		$args = array(
 			'posts_per_page'   => 3,
+			'cat' => '5,7,8'
 		);
 		$posts_array = get_posts( $args );
 		if ( !empty( $posts_array ) ) {
