@@ -92,7 +92,7 @@ get_header();
 				</div>
 				<div class="article-content">
 					<h5><a href="<?php print $a_post->guid ?>"><?php print $a_post->post_title ?></a></h5>
-					<p><?php print $a_post->post_excerpt; ?></p>
+					<p><?php print wp_trim_words( wpautop( $a_post->post_content ), 100, '...' ); ?></p>
 				</div>
 			</article>
 				<?php 
