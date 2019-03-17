@@ -16,7 +16,6 @@ function the_showcase() {
 
 				// store the title and subtitle
 				$title = ( isset( $slide["title"] ) ? $slide["title"] : '' );
-				$subtitle = ( isset( $slide["subtitle"] ) ? $slide["subtitle"] : '' );
 				$link = ( isset( $slide["link"] ) ? $slide["link"] : '' );
 
 				// check if it's an image or video
@@ -34,10 +33,11 @@ function the_showcase() {
 				<?php print $image; ?>
 				<?php if ( !empty( $link ) ) { ?></a><?php } ?>
 				
-				<?php if ( !empty( $title ) || !empty( $subtitle ) ) { ?>
-				<div class="slide-content">
-					<?php if ( !empty( $title ) ) { ?><h1><?php print $title; ?></h1><?php } ?>
-					<?php if ( !empty( $subtitle ) ) { ?><h2><?php print $subtitle; ?></h2><?php } ?>
+				<?php if ( !empty( $title ) ) { ?>
+				<div class="wrap">
+					<div class="slide-content">
+						<h1><?php print $title; ?></h1>
+					</div>
 				</div>
 				<?php } ?>
 			</div>
