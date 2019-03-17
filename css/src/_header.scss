@@ -64,7 +64,7 @@ header {
 		}
 
 		@include respond-to( $menu-bp-large ) {
-			left: 175px;
+			right: 175px;
 		}
 
 		button {
