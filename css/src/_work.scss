@@ -17,6 +17,11 @@
 		display: inline;
 		margin: 0 auto;
 		text-transform: uppercase;
+		font-size: 1.4em;
+
+		@include respond-to( 768px ) {
+			font-size: 1.6em;
+		}
 
 		&:before {
 			content: '';
