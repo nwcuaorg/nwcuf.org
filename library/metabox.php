@@ -50,12 +50,6 @@ function page_metaboxes( $meta_boxes ) {
     ) );
 
     $showcase_metabox->add_group_field( $showcase_metabox_group, array(
-        'name' => 'Subtitle',
-        'id'   => 'subtitle',
-        'type' => 'text',
-    ) );
-
-    $showcase_metabox->add_group_field( $showcase_metabox_group, array(
         'name' => 'Link',
         'id'   => 'link',
         'type' => 'text',
