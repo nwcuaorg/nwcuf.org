@@ -5,7 +5,10 @@
 
 	article {
 		background: white;
-		border: 10px solid $navy;
+
+		&.navy { border: 10px solid $navy; }
+		&.lime { border: 10px solid $lime; }
+		&.teal { border: 10px solid $teal; }
 
 		.article-thumbnail {
 			max-height: 200px;
@@ -54,7 +57,10 @@
 	article {
 		@include clearfix;
 		background: white;
-		border: 10px solid $navy;
+
+		&.navy { border: 10px solid $navy; }
+		&.lime { border: 10px solid $lime; }
+		&.teal { border: 10px solid $teal; }
 
 		.article-thumbnail {
 			@include respond-to( 768px ) {			

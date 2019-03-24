@@ -92,7 +92,7 @@ get_header();
 		if ( !empty( $posts_array ) ) {
 			foreach ( $posts_array as $a_post ) {
 				?>
-			<article class="post-<?php print $article_cat; ?>">
+			<article class="post-<?php print $article_cat; ?> <?php show_cmb_value( 'large-title-color' ); ?>">
 				<div class="article-thumbnail">
 					<img src="<?php print get_the_post_thumbnail_url( $a_post->ID, 'post-thumbnail' ); ?>" />
 				</div>
