@@ -169,6 +169,27 @@ header {
 								}
 							}
 						}
+
+						&:hover, &.open {
+							ul.sub-menu {
+								display: block;
+							}
+						}
+						
+						ul.sub-menu {
+							display: none;
+
+							@include respond-to( $menu-bp ) {
+								position: absolute;
+								left: 250px;
+								top: 0;
+								width: 250px;
+								background: $teal;
+								@include clearfix;
+								text-align: left;
+							}
+						}
+
 					}
 				}
 			}
