@@ -98,7 +98,7 @@ get_header();
 				</div>
 				<div class="article-content">
 					<h5><a href="<?php print $a_post->guid ?>"><?php print $a_post->post_title ?></a></h5>
-					<p><?php print wp_trim_words( wpautop( $a_post->post_content ), 24, '...' ); ?></p>
+					<p><?php print wp_trim_words( wpautop( $a_post->post_content ), 24, '...' ); ?> <a href="<?php print get_permalink( $a_post->ID ); ?>">Read more &raquo;</a></p>
 				</div>
 			</article>
 				<?php 
