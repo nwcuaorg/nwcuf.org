@@ -86,8 +86,14 @@ get_header();
 		$posts_array = get_posts( $args );
 		if ( !empty( $posts_array ) ) {
 			foreach ( $posts_array as $a_post ) {
+				$color = 'navy';
+				if ( in_category( 7, $a_post->ID ) ) {
+					$color = 'lime';
+				} else if ( in_category( 8, $a_post->ID ) ) {
+					$color = 'teal';
+				}
 				?>
-			<article class="navy">
+			<article class="<?php print $color ?>">
 				<div class="article-thumbnail">
 					<img src="<?php print get_the_post_thumbnail_url( $a_post->ID, 'post-thumbnail' ); ?>" />
 				</div>
