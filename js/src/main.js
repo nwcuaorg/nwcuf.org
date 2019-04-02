@@ -36,15 +36,19 @@ jQuery(document).ready(function($){
 
 	});
 
-	// 
+	// accordion box bindings
 	$( '.accordion-box-title' ).click(function(){
 		$( this ).parent( '.accordion-box' ).children( '.accordion-box-content' ).slideToggle( 600 );
 	});
 
+
+	// link buttons that have a 'data-url' parameter
 	$( 'button[data-url]' ).click(function(){
 		window.location.href = $( this ).attr( 'data-url' );
 	});
 
+
+	// let's add a 'scrolled' indicator
 	$(window).on('scroll', function() {
 	    scrollPosition = $(this).scrollTop();
 	    if (scrollPosition >= 250) {
@@ -55,7 +59,45 @@ jQuery(document).ready(function($){
 	    	$('header').removeClass('scrolled');
 	    }
 	});
-	
+
+	// make sure the column contents are the same height so the buttons align with each other on large screens.
+	var set_column_content_heights = function() {
+		// set heights to auto so we can measure them
+		$('.our-work .third .col-content').height( 'auto' );
+
+		// var to hold the tallest height so we know what to set them as.
+		var tallest_height = 0;
+
+		// do this on tablet portait and higher, otherwise keep it auto.
+		if ( $(window).width() > 768 ) {
+
+			// find and loop through all the columns in the .our-work section
+			$('.our-work').find('.third').each(function(){
+				
+				// if it's larger than our variable, store the new largest height
+				if ( $(this).find('.col-content').height() > tallest_height ) {
+					tallest_height = $(this).find('.col-content').height();
+				}
+
+			});
+
+			// finally, set heights of all col content divs to the tallest, so the buttons line up.
+			$('.our-work .third .col-content').height( tallest_height );
+
+		} else {
+
+			// set all heights to auto if they switch to smaller screen orientation
+			$('.our-work .third .col-content').height( 'auto' );
+
+		}
+	}
+
+	// set column heights on load
+	setTimeout( set_column_content_heights, 200 );
+
+	// set column heights on resize
+	$(window).resize( set_column_content_heights );
+
 });
 
 

@@ -41,11 +41,13 @@ get_header();
 			if ( !empty( $a_work['image'] ) && !empty( $a_work['title'] ) && !empty( $a_work['content'] ) ) { 
 				?>
 		<article class="third">
-			<img src="<?php print $a_work['image'] ?>" />
-			<h4><?php print $a_work['title'] ?></h4>
-			<?php if ( !empty( $a_work['content'] ) ) { ?>
-			<p class="content"><?php print $a_work['content'] ?></p>
-			<?php } ?>
+			<div class="col-content">
+				<img src="<?php print $a_work['image'] ?>" />
+				<h4><?php print $a_work['title'] ?></h4>
+				<?php if ( !empty( $a_work['content'] ) ) { ?>
+				<p class="content"><?php print $a_work['content'] ?></p>
+				<?php } ?>
+			</div>
 			<p class="buttons">
 				<?php if ( !empty( $a_work['orange_text'] ) && !empty( $a_work['orange_link'] ) ) { ?>
 				<a href="<?php print $a_work['orange_link'] ?>" class="button orange"><?php print $a_work['orange_text'] ?></a><br>

@@ -24,9 +24,11 @@ function columns( $num=1 ) {
 				if ( !empty( $a_col['image'] ) ) { 
 					?>
 			<article class="third">
-				<img src="<?php print $a_col['image'] ?>" />
-				<?php if ( !empty( $a_col['title'] ) ) { ?><h4><?php print $a_col['title'] ?></h4><?php } ?>
-				<?php if ( !empty( $a_col['content'] ) ) { ?><p class="content"><?php print apply_filters( 'the_content', $a_col['content'] ); ?></p><?php } ?>
+				<div class="col-content">
+					<img src="<?php print $a_col['image'] ?>" />
+					<?php if ( !empty( $a_col['title'] ) ) { ?><h4><?php print $a_col['title'] ?></h4><?php } ?>
+					<?php if ( !empty( $a_col['content'] ) ) { ?><p class="content"><?php print apply_filters( 'the_content', $a_col['content'] ); ?></p><?php } ?>
+				</div>
 				<p class="buttons">
 					<?php if ( !empty( $a_col['orange_text'] ) && !empty( $a_col['orange_link'] ) ) { ?>
 					<a href="<?php print $a_col['orange_link'] ?>" class="button orange"><?php print $a_col['orange_text'] ?></a><br>
