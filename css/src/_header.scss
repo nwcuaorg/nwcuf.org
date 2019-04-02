@@ -146,13 +146,13 @@ header {
 						position: absolute;
 						left: 0;
 						top: 100px;
-						width: 250px;
+						width: 270px;
 						@include clearfix;
 						text-align: left;
 					}
 
 					li {
-						box-shadow: inset 0px 5px 12px -10px rgba( white, .2 );
+						box-shadow: inset 0px 5px 15px -10px rgba( white, .2 );
 						display: block;
 
 						a {
@@ -163,7 +163,7 @@ header {
 
 							@include respond-to( $menu-bp ) {
 								text-align: left;
-								padding: 12px 15px;
+								padding: 18px 20px;
 
 								&:hover {
 									background: lighten( $navy, 10% );
@@ -182,13 +182,19 @@ header {
 
 							@include respond-to( $menu-bp ) {
 								position: absolute;
-								left: 250px;
+								left: 270px;
 								top: 0;
-								width: 250px;
-								background: $navy;
+								width: 270px;
+								background: lighten( $navy, 5% );
 								@include clearfix;
 								text-align: left;
+								border-left: 1px solid darken( $navy, 5% );
 							}
+
+							a:hover {
+								background: lighten( $navy, 10% );
+							}
+
 						}
 
 					}
