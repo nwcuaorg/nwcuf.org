@@ -27,7 +27,6 @@ header {
 		&.scrolled {
 			background: rgba( $grey, .95 );
 		}
-
 	}
 
 	.admin-bar & {
@@ -140,32 +139,34 @@ header {
 				ul.sub-menu {
 					display: none;
 					margin-bottom: 3px;
+					background: $navy;
+					color: white;
 
 					@include respond-to( $menu-bp ) {
 						position: absolute;
 						left: 0;
 						top: 100px;
 						width: 250px;
-						background: $teal;
 						@include clearfix;
 						text-align: left;
 					}
 
 					li {
-						box-shadow: inset 0px 5px 12px -10px rgba(100, 100, 100, 0.69);
+						box-shadow: inset 0px 5px 12px -10px rgba( white, .2 );
 						display: block;
 
 						a {
 							padding: 8px 5px;
 							font-size: .9em;
 							display: block;
+							background: none;
 
 							@include respond-to( $menu-bp ) {
 								text-align: left;
 								padding: 12px 15px;
 
 								&:hover {
-									background: lighten( $teal, 2% );
+									background: lighten( $navy, 10% );
 								}
 							}
 						}
@@ -184,7 +185,7 @@ header {
 								left: 250px;
 								top: 0;
 								width: 250px;
-								background: $teal;
+								background: $navy;
 								@include clearfix;
 								text-align: left;
 							}
