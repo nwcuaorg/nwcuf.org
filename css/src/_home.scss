@@ -47,19 +47,6 @@ $icon-width: 70px;
 			}
 		}
 
-		.semi {
-			padding: 10px 0;
-			text-transform: uppercase;
-
-			h4 {
-				font-size: 1.1em;
-
-				@include respond-to( 1024px ) {
-					font-size: 1.3em;
-				}
-			}
-		}
-
 		.light {
 			padding: 10px 20px 20px;
 

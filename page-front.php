@@ -20,9 +20,6 @@ get_header();
 					<h3><?php show_cmb_value( 'home_third_1_title', 'Left<br> Title' ) ?></h3>
 					<p><?php show_cmb_value( 'home_third_1_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ); ?></p>
 				</div>
-				<div class="semi">
-					<h4><?php show_cmb_value( 'home_third_1_stat_title', 'Stat Title' ); ?></h4>
-				</div>
 				<div class="light">
 					<h2><?php show_cmb_value( 'home_third_1_stat_number', '99%' ); ?></h2>
 					<p><?php show_cmb_value( 'home_third_1_stat_label', 'of statistics are fake.' ); ?></p>
@@ -37,9 +34,6 @@ get_header();
 					<h3><?php print str_replace( '*', '<br>', get_cmb_value( 'home_third_2_title' ) ) ?></h3>
 					<p><?php show_cmb_value( 'home_third_2_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ); ?></p>
 				</div>
-				<div class="semi">
-					<h4><?php show_cmb_value( 'home_third_2_stat_title', 'Stat Title' ); ?></h4>
-				</div>
 				<div class="light">
 					<h2><?php show_cmb_value( 'home_third_2_stat_number', '99%' ); ?></h2>
 					<p><?php show_cmb_value( 'home_third_2_stat_label', 'of statistics are fake.' ); ?></p>
@@ -53,9 +47,6 @@ get_header();
 					<img src="<?php show_cmb_value( 'home_third_3_icon', get_bloginfo( 'template_url' ) . '/img/icon-temp.png' ) ?>" />
 					<h3><?php show_cmb_value( 'home_third_3_title', 'Right<br> Title' ) ?></h3>
 					<p><?php show_cmb_value( 'home_third_3_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ); ?></p>
-				</div>
-				<div class="semi">
-					<h4><?php show_cmb_value( 'home_third_3_stat_title', 'Stat Title' ); ?></h4>
 				</div>
 				<div class="light">
 					<h2><?php show_cmb_value( 'home_third_3_stat_number', '99%' ); ?></h2>

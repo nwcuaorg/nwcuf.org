@@ -152,12 +152,6 @@ function page_metaboxes( $meta_boxes ) {
     ) );
 
     $home_thirds_metabox->add_field( array(
-        'name' => 'Statistic Title (#1)',
-        'id'   => CMB_PREFIX . 'home_third_1_stat_title',
-        'type' => 'text',
-    ) );
-
-    $home_thirds_metabox->add_field( array(
         'name' => 'Statistic Number (#1)',
         'id'   => CMB_PREFIX . 'home_third_1_stat_number',
         'type' => 'text',
@@ -212,12 +206,6 @@ function page_metaboxes( $meta_boxes ) {
     ) );
 
     $home_thirds_metabox->add_field( array(
-        'name' => 'Statistic Title (#2)',
-        'id'   => CMB_PREFIX . 'home_third_2_stat_title',
-        'type' => 'text',
-    ) );
-
-    $home_thirds_metabox->add_field( array(
         'name' => 'Statistic Number (#2)',
         'id'   => CMB_PREFIX . 'home_third_2_stat_number',
         'type' => 'text',
@@ -268,12 +256,6 @@ function page_metaboxes( $meta_boxes ) {
     $home_thirds_metabox->add_field( array(
         'name' => 'Subtitle (#3)',
         'id'   => CMB_PREFIX . 'home_third_3_subtitle',
-        'type' => 'text',
-    ) );
-
-    $home_thirds_metabox->add_field( array(
-        'name' => 'Statistic Title (#3)',
-        'id'   => CMB_PREFIX . 'home_third_3_stat_title',
         'type' => 'text',
     ) );
 
