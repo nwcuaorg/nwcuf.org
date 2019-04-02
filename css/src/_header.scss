@@ -138,8 +138,6 @@ header {
 
 				ul.sub-menu {
 					display: none;
-					margin-bottom: 3px;
-					background: $navy;
 					color: white;
 
 					@include respond-to( $menu-bp ) {
@@ -152,21 +150,22 @@ header {
 					}
 
 					li {
-						box-shadow: inset 0px 5px 15px -10px rgba( white, .2 );
 						display: block;
 
 						a {
 							padding: 8px 5px;
 							font-size: .9em;
 							display: block;
-							background: none;
+							background: $navy;
+							box-shadow: inset 0px 5px 15px -10px rgba( white, .2 );
 
 							@include respond-to( $menu-bp ) {
 								text-align: left;
-								padding: 18px 20px;
+								padding: 14px 18px;
 
 								&:hover {
-									background: lighten( $navy, 10% );
+									background: lighten( $navy, 5% );
+									box-shadow: inset 0px 5px 15px -10px rgba( white, .2 );
 								}
 							}
 						}
@@ -178,23 +177,20 @@ header {
 						}
 						
 						ul.sub-menu {
-							display: none;
+							display: block;
+							position: static;
 
-							@include respond-to( $menu-bp ) {
-								position: absolute;
-								left: 270px;
-								top: 0;
-								width: 270px;
-								background: lighten( $navy, 5% );
-								@include clearfix;
-								text-align: left;
-								border-left: 1px solid darken( $navy, 5% );
+							a {
+								background: darken( $navy, 5% );
+								box-shadow: inset 0px 5px 15px -10px rgba( black, .4 );
+								padding: 8px 18px;
+								transition: background 400ms ease-in-out;
+
+								&:hover {
+									box-shadow: inset 0px 5px 15px -10px rgba( black, .4 );
+									background: $navy;
+								}
 							}
-
-							a:hover {
-								background: lighten( $navy, 10% );
-							}
-
 						}
 
 					}
