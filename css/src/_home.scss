@@ -6,6 +6,10 @@ $icon-width: 70px;
 .home-sections {
 	background: rgba( $grey, .6 );
 	padding-bottom: 20px;
+
+	@include respond-to( $menu-bp ) {
+		padding-bottom: 30px;
+	}
 	
 	section {
 		background: white;
@@ -74,10 +78,6 @@ $icon-width: 70px;
 			@include respond-to( 768px ) {
 				height: 160px;
 			}
-
-			@include respond-to( $menu-bp ) {
-
-			}
 		}
 		
 		@include respond-to( 768px ) {
@@ -99,21 +99,21 @@ $icon-width: 70px;
 			.solid { background: $navy; }
 			.solid:after, .solid:before { background: $navy; }
 			.semi { background: rgba( $navy, .5 ); }
-			.light { background: rgba( $navy, .2 ); color: $navy; }
+			.light { background: white; color: $navy; }
 			&:before { background: rgba( $navy, .6 ); }
 		}
 
 		&.lime {
 			.solid { background: $lime; }
 			.semi { background: rgba( $lime, .6 ); }
-			.light { background: rgba( $lime, .2 ); color: $lime; }
+			.light { background: white; color: $lime; }
 			&:before { background: rgba( $lime, .6 ); }
 		}
 
 		&.teal {
 			.solid { background: $teal; }
 			.semi { background: rgba( $teal, .6 ); }
-			.light { background: rgba( $teal, .2 ); color: $teal; }
+			.light { background: white; color: $teal; }
 			&:before { background: rgba( $teal, .6 ); }
 		}
 	}
