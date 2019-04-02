@@ -48,6 +48,10 @@
 		@include respond-to( $menu-bp ) {
 			margin: 20px 1.5%;
 		}
+
+		@include respond-to( $menu-bp-large ) {
+			min-height: 475px;
+		}
 	}
 }
 
