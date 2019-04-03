@@ -177,15 +177,23 @@ header {
 						}
 						
 						ul.sub-menu {
-							display: block;
-							position: static;
+							display: none;
+							
+							@include respond-to( $menu-bp ) {
+								position: absolute;
+								left: 270px;
+								top: 0;
+								width: 270px;
+								background: lighten( $navy, 5% );
+								@include clearfix;
+								text-align: left;
+								border-left: 1px solid darken( $navy, 5% );
+							}
 
 							a {
 								background: darken( $navy, 5% );
 								box-shadow: inset 0px 5px 15px -10px rgba( black, .4 );
-								padding: 8px 18px;
 								transition: background 400ms ease-in-out;
-								font-size: .8em;
 								color: rgba( white, .6 );
 
 								&:hover {
