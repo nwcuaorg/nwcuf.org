@@ -354,6 +354,7 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Orange Button Link',
         'id'   => 'orange_link',
         'type' => 'text',
+        'sanitization_cb' => 'cmb2_relative_urls'
     ) );
 
     $work_metabox->add_group_field( $work_metabox_group, array(
@@ -366,6 +367,7 @@ function page_metaboxes( $meta_boxes ) {
         'name' => 'Second Button Link',
         'id'   => 'second_link',
         'type' => 'text',
+        'sanitization_cb' => 'cmb2_relative_urls'
     ) );
 
     $work_metabox->add_group_field( $work_metabox_group, array(
