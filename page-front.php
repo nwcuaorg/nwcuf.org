@@ -70,10 +70,10 @@ get_header();
 	<div class="footer-articles">
 		<div class="wrap group">
 		<?php 
+		$sticky = get_option( 'sticky_posts' );
 		$args = array(
-			'posts_per_page'   => 3,
-			'cat' => '5,7,8',
-			'ignore_sticky_posts' => 0
+			'posts_per_page' => 3,
+			'post__in' => $sticky
 		);
 		$posts_array = get_posts( $args );
 		if ( !empty( $posts_array ) ) {
