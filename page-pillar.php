@@ -76,7 +76,7 @@ get_header();
 	if ( !empty( $cats ) ) {
 		$article_cat = $cats[0]->term_id;
 		$args = array(
-			'posts_per_page' => 1,
+			'posts_per_page' => 3,
 			'cat' => $article_cat
 		);
 		$posts_array = get_posts( $args );
