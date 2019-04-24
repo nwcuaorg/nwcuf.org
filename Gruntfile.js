@@ -29,8 +29,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'js/main.js': [
-                        'js/lib/fitvids/jquery.fitvids.js',
-                        'js/lib/magnific/dist/jquery.magnific-popup.js',
+                        'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
                         'js/src/*.js',
                     ]
                 }
