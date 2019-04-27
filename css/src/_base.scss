@@ -63,6 +63,31 @@ a {
 	}
 }
 
+.gform_wrapper .gform_footer {
+	input[type=submit], input[type=button], input[type=reset], button, .btn {
+		@include font;
+		background-color: $green;
+		color: white;
+		opacity: 1;
+		border: 0;
+		padding: 10px 20px;
+		font-size: 22px;
+		line-height: 22px;
+		text-transform: uppercase;
+		transition: opacity 400ms ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			opacity: .8;
+		}
+
+		@include respond-to( 768px ) {
+			font-size: 30px;
+			line-height: 30px;
+		}
+	}
+}
+
 
 
 .content-style {
