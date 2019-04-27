@@ -19,32 +19,49 @@
 				color: #ddd;
 			}
 
-			&.gsection {
-				margin: 30px 0 10px !important;
+			&.field_description_below+li.gsection {
+				margin: 50px 0 10px !important;
 
 				@include respond-to( 768px ) {
-					margin: 50px 0 15px !important;
+					margin: 80px 0 15px !important;
+				}
+
+				&:first-child {
+					margin-top: 0 !important;
+					@include respond-to( 768px ) { margin-top: 0 !important; }
 				}
 			}
 		}
-
 	}
 	
-	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+
+	// lets set some padding on all text fields.	
+	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea {
 		padding: 7px 5px;
+		border: 3px solid #ddd;
+
+		&:focus {
+			border: 3px solid $green;
+			outline: none;
+		}
 	}
+
 
 	// some styles for radio button fields
 	.gfield {
 		&.donate-type, &.donate-amount {
-			.gfield_radio li {
-				background: lighten( $grey, 50% );
-				padding: 7px 13px 10px !important;
-				margin-right: 5px;
-				border-radius: 5px;
+			.gfield_radio {
+				width: auto !important;
 
-				@include respond-to( 768px ) {
-					float: left;
+				li {
+					background: lighten( $grey, 50% );
+					padding: 7px 13px 10px !important;
+					margin-right: 5px;
+					border-radius: 5px;
+
+					@include respond-to( 768px ) {
+						float: left;
+					}
 				}
 			}
 		}
