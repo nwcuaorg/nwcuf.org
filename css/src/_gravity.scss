@@ -31,6 +31,10 @@
 					@include respond-to( 768px ) { margin: 0 0 15px !important; }
 				}
 			}
+
+			&.donate-recurring {
+				margin-top: -20px !important;
+			}
 		}
 	}
 	
