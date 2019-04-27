@@ -11,8 +11,10 @@
 	}
 }
 
-body.no-showcase {
-	padding-top: 100px;
+@include respond-to( 1024px ) {			
+	body.no-showcase {
+		padding-top: 100px;
+	}
 }
 
 .content-narrow {

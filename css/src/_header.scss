@@ -8,10 +8,6 @@ header {
 
 	.wrap {
 		position: relative;
-
-		@include respond-to( 768px ) {
-			padding: 0 20px;
-		}
 	}
 
 	@include respond-to( $menu-bp ) {
