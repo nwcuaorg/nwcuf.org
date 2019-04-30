@@ -29,6 +29,9 @@ get_header(); ?>
 		endwhile;
 		?>
 		</div>
+		<div class="pagination">
+			<?php pagination() ?>
+		</div>
 	</div>
 
 <?php get_footer(); ?>
