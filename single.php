@@ -49,7 +49,7 @@ get_header();
 		?>
 	<div class="work-title bg-<?php print $color; ?>">
 		<div class="wrap">
-			<h2>Related Articles</h2>
+			<h2>Other Stories</h2>
 		</div>
 	</div>
 
