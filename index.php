@@ -5,32 +5,30 @@ Home/catch-all template
 
 get_header(); ?>
 
+	<div class="wrap content-wide">
+		<div class="articles-listing">
+		<?php
+		if ( is_search() ) {
+			?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><br><?php
+		} else {
+			?><h1>News</h1><br><?php
+		}
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<div class="content-narrow">
-			<?php
-			if ( is_search() ) {
-				?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
-			} else {
-				?><h1>NWCUF Blog</h1><?php
-			}
-
-			while ( have_posts() ) : the_post();
-				?>
-				<hr>
-				<?php the_post_thumbnail(); ?>
-				<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-				<?php the_excerpt(); ?>
-				<?php
-			endwhile;
+		while ( have_posts() ) : the_post();
 			?>
-				<div class="group"></div>
-			</div>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
+			<article <?php post_class() ?>>
+				<div class="article-thumbnail">
+					<?php the_post_thumbnail(); ?>			
+				</div>
+				<div class="article-content">
+					<h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
+					<?php the_excerpt(); ?>
+				</div>
+			</article>
+			<?php
+		endwhile;
+		?>
+		</div>
+	</div>
 
 <?php get_footer(); ?>
