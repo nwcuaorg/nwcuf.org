@@ -9,6 +9,7 @@
 		&.navy { border: 10px solid $navy; }
 		&.lime { border: 10px solid $lime; }
 		&.teal { border: 10px solid $teal; }
+		&.grey { border: 10px solid $grey; }
 
 		.article-thumbnail {
 			max-height: 200px;
@@ -66,6 +67,7 @@
 		&.navy { border: 10px solid $navy; }
 		&.lime { border: 10px solid $lime; }
 		&.teal { border: 10px solid $teal; }
+		&.grey { border: 10px solid $grey; }
 
 		.article-thumbnail {
 			@include respond-to( 768px ) {
@@ -191,4 +193,47 @@
 	}
 }
 
+
+
+.single {
+	.single-article {
+		article {
+			padding-bottom: 20px;
+
+			h2 {
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				@include font-medium;
+				color: $grey;
+
+				.category-economic-empowerment & { color: $navy; }
+				.category-asset-building & { color: $lime; }
+				.category-cooperative-development & { color: $teal; }
+			}
+
+			.article-thumbnail {
+				float: right;
+				margin: 0 0 20px 20px;
+
+				img {
+					border: 10px solid $grey;
+				}
+			}
+
+			&.category-economic-empowerment { 
+				h2 { color: $navy; }
+				.article-thumbnail img { border: 10px solid $navy; }
+			}
+			&.category-asset-building {			
+				h2 { color: $lime; }
+				.article-thumbnail img { border: 10px solid $lime; }
+			}
+			&.category-cooperative-development {
+				h2 { color: $teal; }
+				.article-thumbnail img { border: 10px solid $teal; }
+			}
+		}	
+	}
+
+}
 
