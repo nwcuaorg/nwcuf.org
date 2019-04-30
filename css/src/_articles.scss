@@ -158,3 +158,37 @@
 		}
 	}
 }
+
+
+
+.pagination {
+	padding: 15px 0;
+	text-align: center;
+	font-size: 15px;
+	line-height: 15px;
+	@include font;
+
+	@include respond-to( 768px ) {
+		padding: 40px 0;
+	}
+
+	a {
+		padding: 7px 12px;
+		background: lighten( $grey, 20% );
+		color: white;
+		text-decoration: none;
+		display: inline-block;
+
+		&:hover {
+			background: lighten( $grey, 37% );
+		}
+	}
+
+	.current {
+		padding: 7px 12px;
+		display: inline-block;
+		background: lighten( $grey, 40% );
+	}
+}
+
+
