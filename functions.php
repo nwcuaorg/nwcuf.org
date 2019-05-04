@@ -7,6 +7,7 @@ define( "CMB_PREFIX", "_p_" );
 // include some theme-related things
 include( "library/menus.php" );
 include( "library/scripts.php" );
+include( "library/buttons.php" );
 
 
 // an extra image manipulation function
