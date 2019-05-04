@@ -63,7 +63,7 @@ a {
 	}
 }
 
-input[type=submit], input[type=button], input[type=reset], button, .btn {
+.btn {
 	@include font;
 	background-color: $green;
 	color: white;
@@ -78,6 +78,27 @@ input[type=submit], input[type=button], input[type=reset], button, .btn {
 	text-decoration: none;
 	display: inline-block;
 	text-align: center;
+
+	&.yellow {
+		background-color: $orange;
+		color: black;
+
+		&:hover {
+			color: black;
+		}
+	}
+
+	&.navy {
+		background-color: $navy;
+	}
+
+	&.teal {
+		background-color: $teal;
+	}
+
+	&.grey {
+		background-color: $grey;
+	}
 
 	&:hover {
 		opacity: .8;
