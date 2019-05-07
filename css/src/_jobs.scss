@@ -17,13 +17,13 @@
 
 
 .job-list {
-	border-top: 3px solid lighten( $grey, 40% );
-	margin: 20px 0;
-	padding: 20px 0 0;
-
 	.job-entry {
 		border-bottom: 3px solid lighten( $grey, 40% );
-		padding-bottom: 20px;
+		padding: 20px 0;
+
+		&:last-child {
+			border-bottom: 0;
+		}
 	}
 }
 
