@@ -110,7 +110,7 @@
 				line-height: 30px;
 			}
 
-			@include respond-to( $menu-breakpoint ) {
+			@include respond-to( $menu-bp ) {
 				font-size: 35px;
 				line-height: 40px;
 			}
