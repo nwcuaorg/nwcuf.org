@@ -30,6 +30,10 @@ include( "library/articles.php" );
 include( "library/friends.php");
 
 
+// Job custom post type
+include( "library/post-type/job.php");
+
+
 // pagination
 function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
     global $wp_query, $wp_rewrite;

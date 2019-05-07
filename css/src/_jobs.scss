@@ -1,0 +1,94 @@
+
+
+
+.single-job {
+	h1 {
+		@include respond-to( 768px ) {
+			padding-left: 10px;
+		}
+	}
+
+	.two-third {
+		@include respond-to( 768px ) {
+			padding-left: 0;
+		}
+	}
+}
+
+
+.job-list {
+	border-top: 3px solid lighten( $grey, 40% );
+	margin: 20px 0;
+	padding: 20px 0 0;
+
+	.job-entry {
+		border-bottom: 3px solid lighten( $grey, 40% );
+		padding-bottom: 20px;
+	}
+}
+
+
+.job-info {
+	padding: 0;
+	
+	@include respond-to( 768px ) {
+		padding: 0 0 0 20px;
+		border-left: 4px solid lighten( $grey, 25% );
+	}
+
+	label {
+		@include font-bold;
+	}	
+}
+
+
+.entry-job {
+	border-bottom: 3px solid lighten( $grey, 25% );
+	padding: 20px 0;
+	position: relative;
+
+	.job-info {
+		@include respond-to( 768px ) {
+			margin-bottom: 10px;
+		}
+	}
+
+	.job-delete {
+		float: right;
+		background: #e40d0d;
+		color: white;
+		padding: 7px 14px;
+		opacity: .8;
+		transition: 400ms opacity ease-in-out;
+
+		&:hover {
+			opacity: 1;
+			text-decoration: none;
+		}
+
+		@include respond-to( 600px ) {
+			float: none;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+}
+
+
+.job-count {
+	border-bottom: 3px solid lighten( $grey, 25% );
+	padding: 20px 0;
+}
+
+
+.job-search {
+	float: right;
+	max-width: 40%;
+	padding-top: 10px;
+
+	input[type=text] {
+		padding: 10px;
+	}
+}
+

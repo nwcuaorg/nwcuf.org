@@ -62,6 +62,12 @@
 		float: left;
 	}
 
+	.quarter, .third, .half, .two-third, .three-quarter {
+		&.right {
+			float: right;
+		}
+	}
+
 	.quarter {
 		width: 23%;
 		margin: 0 1%;
