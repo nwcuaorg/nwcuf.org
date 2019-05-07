@@ -109,6 +109,11 @@
 				font-size: 30px;
 				line-height: 30px;
 			}
+
+			@include respond-to( $menu-breakpoint ) {
+				font-size: 35px;
+				line-height: 40px;
+			}
 		}
 	}
 
