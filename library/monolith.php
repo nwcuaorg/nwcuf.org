@@ -1,6 +1,7 @@
 <?php
 
 function columns( $num=1 ) {
+	$page_id = get_the_ID();
 	$cols = get_cmb_value( 'columns_' . $num );
 	if ( !empty( $cols ) || has_cmb_value( 'columns_' . $num . '_content' ) ) {
 		?>
@@ -25,7 +26,13 @@ function columns( $num=1 ) {
 					?>
 			<article class="third">
 				<div class="col-content">
+					<?php if ( $page_id == 3296 && $num == 2 ) { ?>
+					<a href="<?php print $a_col['orange_link']; ?>">
+					<?php } ?>
 					<img src="<?php print $a_col['image'] ?>" />
+					<?php if ( $page_id == 3296 && $num == 2 ) { ?>
+					</a>
+					<?php } ?>
 					<?php if ( !empty( $a_col['title'] ) ) { ?><h4><?php print $a_col['title'] ?></h4><?php } ?>
 					<?php if ( !empty( $a_col['content'] ) ) { ?><p class="content"><?php print apply_filters( 'the_content', $a_col['content'] ); ?></p><?php } ?>
 				</div>
