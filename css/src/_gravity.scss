@@ -106,13 +106,8 @@
 			}
 
 			@include respond-to( 768px ) {
-				font-size: 30px;
+				font-size: 25px !important;
 				line-height: 30px;
-			}
-
-			@include respond-to( $menu-bp ) {
-				font-size: 35px;
-				line-height: 40px;
 			}
 		}
 	}
