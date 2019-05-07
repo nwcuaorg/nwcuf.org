@@ -23,6 +23,7 @@ get_header(); ?>
 				<div class="article-content">
 					<h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
 					<?php the_excerpt(); ?>
+					<p class="quiet">Posted <?php print get_the_date(); ?> in <?php print get_the_category_list( ',' ) ?></p>
 				</div>
 			</article>
 			<?php
