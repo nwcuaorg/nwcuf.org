@@ -47,4 +47,9 @@
 	text-decoration: none;
 	display: inline-block;
 	text-align: center;
+
+	@include respond-to( 1220px ) {
+		font-size: 20px;
+		line-height: 24px;
+	}
 }
