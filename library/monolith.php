@@ -21,18 +21,13 @@ function columns( $num=1 ) {
 
 		<?php
 		if ( !empty( $cols ) ) {
-			foreach ( $cols as $a_col ) {
-				if ( !empty( $a_col['image'] ) ) { 
-					?>
+			foreach ( $cols as $a_col ) { 
+				?>
 			<article class="third">
 				<div class="col-content">
-					<?php if ( $page_id == 3296 && $num == 2 ) { ?>
-					<a href="<?php print $a_col['orange_link']; ?>">
-					<?php } ?>
-					<img src="<?php print $a_col['image'] ?>" />
-					<?php if ( $page_id == 3296 && $num == 2 ) { ?>
-					</a>
-					<?php } ?>
+					<?php if ( $page_id == 3296 && $num == 2 ) { ?><a href="<?php print $a_col['orange_link']; ?>"><?php } ?>
+					<?php if ( !empty( $a_col['image'] ) ) { ?><img src="<?php print $a_col['image'] ?>" /><?php } ?>
+					<?php if ( $page_id == 3296 && $num == 2 ) { ?></a><?php } ?>
 					<?php if ( !empty( $a_col['title'] ) ) { ?><h4><?php print $a_col['title'] ?></h4><?php } ?>
 					<?php if ( !empty( $a_col['content'] ) ) { ?><p class="content"><?php print apply_filters( 'the_content', $a_col['content'] ); ?></p><?php } ?>
 				</div>
@@ -48,8 +43,7 @@ function columns( $num=1 ) {
 					<?php } ?>
 				</p>
 			</article>
-					<?php
-				}
+				<?php
 			}
 		}
 		?>
