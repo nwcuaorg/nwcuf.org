@@ -5,7 +5,7 @@ footer {
 	background: rgba( $grey, .6 );
 	color: white;
 	@include clearfix;
-	
+
 	h3 {
 		@include font-bold;
 		text-transform: uppercase;
@@ -35,8 +35,28 @@ footer {
 	}
 
 	.social {
-		padding: 10px 0;
-		text-align: center;
+		padding: 15px 0 10px;
+		@include clearfix;
+		
+		a {
+			img {
+				border: 1px solid rgba( white, .7 );
+				transition: filter 400ms ease-in-out, -webkit-filter 400ms ease-in-out;
+				filter: grayscale(100%);
+				-webkit-filter: grayscale(100%);
+			}
+
+			&:hover img {
+				filter: none;
+				-webkit-filter: none;
+			}
+		}
+
+		img {
+			float: left;
+			max-width: 23%;
+			margin: 0 1%;
+		}
 	}
 
 	.third {
@@ -48,7 +68,7 @@ footer {
 				content: "";
 				position: absolute;
 				right: 0;
-				bottom: -25px;
+				bottom: 30px;
 				top: 30px;
 				width: 1px;
 				background: white;
