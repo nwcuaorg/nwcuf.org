@@ -14,6 +14,13 @@ get_header(); ?>
 			?><h1>News</h1><br><?php
 		}
 
+		$args = array( 
+			'orderby'=>'date',
+			'order' => 'desc',
+			'post_status' => 'publish'
+		);
+		query_posts( $args );
+
 		while ( have_posts() ) : the_post();
 			?>
 			<article <?php post_class() ?>>

@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div class="wrap content-wide">
 		<div class="articles-listing">
-		<h1><?php single_cat_title(); ?></h1>
+		<h1><?php single_cat_title(); ?></h1><br>
 		<?php
 
 		while ( have_posts() ) : the_post();
