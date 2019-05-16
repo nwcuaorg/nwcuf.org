@@ -14,15 +14,7 @@ get_header(); ?>
 			?><h1>News</h1><br><?php
 		}
 
-		wp_reset_query();
-		/*
-		$args = array( 
-			'orderby'=>'date',
-			'order' => 'desc',
-			'post_status' => 'publish'
-		);
-		query_posts( $args );
-		*/
+		query_posts('ignore_sticky_posts=1');
 
 		while ( have_posts() ) : the_post();
 			?>
