@@ -105,11 +105,6 @@ a {
 		text-decoration: none;
 		color: white;
 	}
-
-	@include respond-to( 768px ) {
-		font-size: 30px;
-		line-height: 30px;
-	}
 }
 
 
