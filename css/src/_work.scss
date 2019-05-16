@@ -87,14 +87,7 @@
 
 	.buttons {
 		a {
-			display: inline-block;
-			margin: 10px auto 0;
-			padding: 7px 15px;
-			text-decoration: none;
-			text-transform: uppercase;
-			opacity: 1;
-			transition: opacity 400ms ease-in-out;
-			@include font-medium;
+			@include button;
 
 			&:hover {
 				color: white;

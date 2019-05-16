@@ -64,20 +64,9 @@ a {
 }
 
 .btn {
-	@include font;
+	@include button;
 	background-color: $green;
 	color: white;
-	opacity: 1;
-	border: 0;
-	padding: 10px 20px 12px;
-	font-size: 22px;
-	line-height: 22px;
-	text-transform: uppercase;
-	transition: opacity 400ms ease-in-out;
-	cursor: pointer;
-	text-decoration: none;
-	display: inline-block;
-	text-align: center;
 
 	&.yellow {
 		background-color: $orange;

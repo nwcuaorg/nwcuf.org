@@ -32,3 +32,19 @@
 @mixin wrap-main {
 	@include wrap( $menu-bp-large );
 }
+
+
+@mixin button {
+	@include font-medium;
+	opacity: 1;
+	border: 0;
+	padding: 10px 15px 12px;
+	font-size: 17px;
+	line-height: 20px;
+	text-transform: uppercase;
+	transition: opacity 400ms ease-in-out;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
