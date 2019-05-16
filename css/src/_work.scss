@@ -69,10 +69,16 @@
 
 .our-work {
 	padding: 20px 0;
+	text-align: center;
 
 	article {
 		text-align: center;
 		padding-bottom: 20px;
+
+		@include respond-to( 768px ) {
+			float: none;
+			display: inline-block;
+		}
 	}
 	
 	.content {
