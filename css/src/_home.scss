@@ -47,8 +47,9 @@ $icon-width: 70px;
 			}
 
 			@include respond-to( $menu-bp ) {
-				height: 300px;
-				font-size: 1.5em;
+				height: 310px;
+				font-size: 1.4em;
+				line-height: 1.3em;
 			}
 		}
 
@@ -104,7 +105,14 @@ $icon-width: 70px;
 		}
 
 		&.lime {
-			.solid { background: $lime; }
+			.solid { 
+				background: $lime;
+				h3 {
+					@include respond-to( 768px ) {
+						padding: 6px 25%;
+					}
+				}
+			}
 			.semi { background: rgba( $lime, .6 ); }
 			.light { background: white; color: $lime; }
 			&:before { background: rgba( $lime, .6 ); }
