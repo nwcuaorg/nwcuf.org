@@ -101,25 +101,12 @@
 	// big huge green buttons for all form submit buttons.
 	.gform_footer {
 		input[type=submit], input[type=button], input[type=reset], button, .btn {
-			@include font;
+			@include button;
 			background-color: $green;
 			color: white;
-			opacity: 1;
-			border: 0;
-			padding: 10px 20px 13px;
-			font-size: 22px;
-			line-height: 22px;
-			text-transform: uppercase;
-			transition: opacity 400ms ease-in-out;
-			cursor: pointer;
 
 			&:hover {
 				opacity: .8;
-			}
-
-			@include respond-to( 768px ) {
-				font-size: 25px !important;
-				line-height: 30px;
 			}
 		}
 
