@@ -1,9 +1,7 @@
 
 
 .impact-stat {
-	@include respond-to( 768px ) {
-		padding: 20px 0;
-	}
+	padding: 20px 0;
 
 	@include respond-to( $menu-bp ) {
 		padding: 40px 0;
