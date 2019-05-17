@@ -18,11 +18,15 @@
 		line-height: 70px;
 		text-align: center;
 		@include font-bold;
+
+		@include respond-to( 1024px ) {
+			font-size: 100px;
+			line-height: 100px;
+		}
 	}
 
 	.stat-label {
 		text-align: center;
-		text-transform: uppercase;
 	}
 
 	.stat-content {

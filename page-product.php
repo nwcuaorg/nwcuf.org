@@ -24,6 +24,26 @@ get_header();
 		</div>
 	</div>
 	
+	<?php if ( has_cmb_value( 'stat_number' ) && has_cmb_value( 'stat_label' ) && has_cmb_value( 'stat_content' ) ) { ?>
+	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
+		<div class="wrap">
+			<h2>Impact</h2>
+		</div>
+	</div>
+
+	<div class="impact-stat">
+		<div class="wrap group">
+			<div class="half">
+				<div class="stat-number text-<?php show_cmb_value( 'large-title-color' ) ?>"><?php show_cmb_value( 'stat_number' ) ?></div>
+				<div class="stat-label text-<?php show_cmb_value( 'large-title-color' ) ?>"><?php show_cmb_value( 'stat_label' ) ?></div>
+			</div>
+			<div class="half stat-content">
+				<?php print wpautop( get_cmb_value( 'stat_content' ) ); ?>
+			</div>
+		</div>
+	</div>
+	<?php } ?>
+	
 	<?php 
 	$work = get_cmb_value( 'work' );
 	if ( !empty( $work ) ) {
@@ -83,7 +103,7 @@ get_header();
 		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 		<div class="wrap">
-			<h2>Our Work</h2>
+			<h2>Our Stories</h2>
 		</div>
 	</div>
 
@@ -112,26 +132,6 @@ get_header();
 		}
 	}
 	?>
-	
-	<?php if ( has_cmb_value( 'stat_number' ) && has_cmb_value( 'stat_label' ) && has_cmb_value( 'stat_content' ) ) { ?>
-	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
-		<div class="wrap">
-			<h2>Impact</h2>
-		</div>
-	</div>
-
-	<div class="impact-stat">
-		<div class="wrap group">
-			<div class="half">
-				<div class="stat-number"><?php show_cmb_value( 'stat_number' ) ?></div>
-				<div class="stat-label"><?php show_cmb_value( 'stat_label' ) ?></div>
-			</div>
-			<div class="half stat-content">
-				<?php print wpautop( get_cmb_value( 'stat_content' ) ); ?>
-			</div>
-		</div>
-	</div>
-	<?php } ?>
 
 <?php 
 

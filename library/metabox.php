@@ -370,6 +370,40 @@ function page_metaboxes( $meta_boxes ) {
 
 
 
+    // impact statistic metabox
+    $stat_metabox = new_cmb2_box( array(
+        'id' => 'stat_metabox',
+        'title' => 'Impact Statistic',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( 'page-product' )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ));
+
+    $stat_metabox->add_field( array(
+        'name' => 'Number',
+        'id'   => CMB_PREFIX . 'stat_number',
+        'type' => 'text',
+    ) );
+
+    $stat_metabox->add_field( array(
+        'name' => 'Label',
+        'id'   => CMB_PREFIX . 'stat_label',
+        'type' => 'text',
+    ) );
+
+    $stat_metabox->add_field( array(
+        'name' => 'Content',
+        'id'   => CMB_PREFIX . 'stat_content',
+        'type' => 'textarea',
+        'desc' => 'Displayed in the right column.'
+    ) );
+
+
+
     // showcase metabox
     $work_metabox = new_cmb2_box( array(
         'id' => 'work_metabox',
@@ -781,40 +815,6 @@ function page_metaboxes( $meta_boxes ) {
         'taxonomy'       => 'category', //Enter Taxonomy Slug
         'type'           => 'taxonomy_select',
         'remove_default' => 'true' // Removes the default metabox provided by WP core.
-    ) );
-
-
-
-    // impact statistic metabox
-    $stat_metabox = new_cmb2_box( array(
-        'id' => 'stat_metabox',
-        'title' => 'Impact Statistic',
-        'object_types' => array( 'page' ), // post type
-        'show_on' => array(
-            'key' => 'template',
-            'value' => array( 'page-product' )
-        ),
-        'context' => 'normal',
-        'priority' => 'high',
-    ));
-
-    $stat_metabox->add_field( array(
-        'name' => 'Number',
-        'id'   => CMB_PREFIX . 'stat_number',
-        'type' => 'text',
-    ) );
-
-    $stat_metabox->add_field( array(
-        'name' => 'Label',
-        'id'   => CMB_PREFIX . 'stat_label',
-        'type' => 'text',
-    ) );
-
-    $stat_metabox->add_field( array(
-        'name' => 'Content',
-        'id'   => CMB_PREFIX . 'stat_content',
-        'type' => 'textarea',
-        'desc' => 'Displayed in the right column.'
     ) );
 
 
