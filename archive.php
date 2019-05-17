@@ -10,6 +10,7 @@ get_header();
 		<div class="articles-listing">
 		<h1><?php single_cat_title(); ?></h1><br>
 		<?php
+		query_posts('ignore_sticky_posts=1');
 
 		while ( have_posts() ) : the_post();
 			?>
