@@ -5,14 +5,29 @@ Home/catch-all template
 
 get_header(); ?>
 
+		<div class="large-title text-lime">
+			<div class="wrap">
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr>
+						<td valign="center" class="large-title-icon"><img src="/wp-content/uploads/2019/04/peopleicons.png"></td>
+						<td valign="center" class="large-title-text">
+							<?php
+							if ( is_search() ) {
+								?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><?php
+							} else {
+								?><h1>News</h1><?php
+							}
+							?>
+						</td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
 	<div class="wrap content-wide">
+		<p style="margin-top: -40px;">Read the latest updates from the Northwest Credit Union Foundation.</p><br>
+
 		<div class="articles-listing">
 		<?php
-		if ( is_search() ) {
-			?><h1>Search Results for <span>'<?php print $_REQUEST["s"]; ?>'</span></h1><br><?php
-		} else {
-			?><h1>News</h1><br><?php
-		}
 
 		query_posts('ignore_sticky_posts=1');
 
@@ -20,7 +35,7 @@ get_header(); ?>
 			?>
 			<article <?php post_class() ?>>
 				<div class="article-thumbnail">
-					<?php the_post_thumbnail(); ?>			
+					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 				</div>
 				<div class="article-content">
 					<h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>
