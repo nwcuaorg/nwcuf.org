@@ -19,7 +19,7 @@ $theme_options = get_option( 'pure_options' );
 	<footer class="footer">
 		<div class="wrap group">
 			<div class="third">
-				<img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png">
+				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png"></a>
 				<nav role="navigation">
 					<?php wp_nav_menu( array( 
 						'theme_location' => 'main-menu', 
@@ -30,7 +30,6 @@ $theme_options = get_option( 'pure_options' );
 					<a href="<?php print $theme_options['social-twitter'] ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-twitter.png" alt="Visit our Twitter Page" /></a>
 					<a href="<?php print $theme_options['social-facebook'] ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-facebook.png" alt="Visit our Facebook Page" /></a>
 					<a href="<?php print $theme_options['social-linkedin'] ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-linkedin.png" alt="Visit our LinkedIn page." /></a>
-					<a href="<?php print $theme_options['social-youtube'] ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-youtube.png" alt="Visit our Youtube Channel" /></a>
 				</div>
 			</div>
 			<div class="two-third">

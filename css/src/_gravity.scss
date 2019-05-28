@@ -120,4 +120,7 @@
 	color: black;
 }
 
-
+// hide the 'price' label on friends of the foundation form
+.ginput_product_price_label {
+	display: none !important;
+}
