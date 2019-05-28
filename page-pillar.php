@@ -84,7 +84,7 @@ get_header();
 		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 		<div class="wrap">
-			<h2>Our Work</h2>
+			<h2>Our Stories</h2>
 		</div>
 	</div>
 
