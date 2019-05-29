@@ -1,7 +1,7 @@
 <?php
 
 
-function the_showcase() {
+function the_showcase( $color = 'grey' ) {
 
 	// get the slides
 	$slides = get_post_meta( get_the_ID(), CMB_PREFIX . "showcase", 1 );
@@ -35,7 +35,7 @@ function the_showcase() {
 				
 				<?php if ( !empty( $title ) ) { ?>
 				<div class="wrap">
-					<div class="slide-content">
+					<div class="slide-content<?php print ( $color != 'grey' ? ' ' . $color : '' ) ?>">
 						<h1><?php print $title; ?></h1>
 					</div>
 				</div>

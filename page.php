@@ -4,7 +4,7 @@ get_header();
 
 ?>
 
-	<?php the_showcase(); ?>
+	<?php the_showcase( get_cmb_value( 'large-title-color' ) ); ?>
 
 	<?php the_large_title(); ?>
 

@@ -20,7 +20,6 @@
 
 	.large-title-text {
 		vertical-align: middle;
-		padding: 10px;
 
 		@include respond-to( 768px ) {
 			padding: 20px;

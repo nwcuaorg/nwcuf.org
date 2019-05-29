@@ -100,7 +100,11 @@
 				left: 20px;
 				right: 20px;
 			}
-			
+
+			&.navy:before, &.navy:after { background: rgba( $navy, .2 );  }
+			&.lime:before, &.lime:after { background: rgba( $lime, .4 );  }
+			&.teal:before, &.teal:after { background: rgba( $teal, .4 );  }
+
 			@include respond-to( 768px ) {
 				position: absolute;
 				left: 50%;
