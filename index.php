@@ -24,7 +24,7 @@ get_header(); ?>
 			</div>
 		</div>
 	<div class="wrap content-wide">
-		<p style="margin-top: -40px;">Read the latest updates from the Northwest Credit Union Foundation.</p><br>
+		<p>Read the latest updates from the Northwest Credit Union Foundation.</p><br>
 
 		<div class="articles-listing">
 		<?php
