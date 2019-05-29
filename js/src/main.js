@@ -111,6 +111,7 @@ jQuery(document).ready(function($){
 
 				// set all heights to auto if they switch to smaller screen orientation
 				$('.our-work .third .col-content').height( 'auto' );
+				$('.our-work .third').css( 'margin-left', '0' );
 
 			}
 
