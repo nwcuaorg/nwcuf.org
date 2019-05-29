@@ -3,6 +3,15 @@
 Home/catch-all template
 */
 
+// ignore sticky posts using the pre_get_posts hook instead of query_posts (buuuugs)
+function category_query_adjust( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'ignore_sticky_posts', true );
+    }
+}
+add_action( 'pre_get_posts', 'category_query_adjust' );
+
+
 get_header(); ?>
 
 		<div class="large-title text-lime">
@@ -28,9 +37,6 @@ get_header(); ?>
 
 		<div class="articles-listing">
 		<?php
-
-		query_posts('ignore_sticky_posts=1');
-
 		while ( have_posts() ) : the_post();
 			?>
 			<article <?php post_class() ?>>
