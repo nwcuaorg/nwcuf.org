@@ -61,7 +61,7 @@ jQuery(document).ready(function($){
 	});
 
 	// make sure the column contents are the same height so the buttons align with each other on large screens.
-	var set_column_content_heights = function() {
+	var monolith_sizes = function() {
 		// set heights to auto so we can measure them
 		$('.our-work .third .col-content').height( 'auto' );
 
@@ -85,6 +85,28 @@ jQuery(document).ready(function($){
 				// finally, set heights of all col content divs to the tallest, so the buttons line up.
 				$(this).find('.third .col-content').height( tallest_height );
 
+				var num_columns = $(this).find('.third').length;
+
+				// set special margin for if there is only one column
+				if ( num_columns === 1 ) {
+					$(this).find('.third:nth(0)').css( 'margin-left', '34%' );
+				}
+
+				// set special margin if there are only 2 columns
+				if ( num_columns === 2 ) {
+					$(this).find('.third:nth(0)').css( 'margin-left', '17%' );
+				}
+
+				// set special margin if there are only 4 columns
+				if ( num_columns === 4 ) {
+					$(this).find('.third:nth(3)').css( 'margin-left', '34%' );
+				}
+
+				// set special margin if there are only 5 columns
+				if ( num_columns === 5 ) {
+					$(this).find('.third:nth(3)').css( 'margin-left', '17%' );
+				}
+
 			} else {
 
 				// set all heights to auto if they switch to smaller screen orientation
@@ -96,10 +118,10 @@ jQuery(document).ready(function($){
 	}
 
 	// set column heights on load
-	setTimeout( set_column_content_heights, 200 );
+	setTimeout( monolith_sizes, 200 );
 
 	// set column heights on resize
-	$(window).resize( set_column_content_heights );
+	$(window).resize( monolith_sizes );
 
 });
 
