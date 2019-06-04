@@ -11,7 +11,7 @@ function the_large_title() {
 				<table cellpadding="0" cellspacing="0" width="100%">
 					<tr>
 					<?php if ( has_cmb_value( 'large-title-icon' ) ) { ?>
-						<td valign="center" class="large-title-icon"><img src="<?php show_cmb_value( 'large-title-icon' ) ?>"></td>
+						<td valign="center" class="large-title-icon"><img src="<?php show_cmb_value( 'large-title-icon' ) ?>" alt="<?php show_cmb_value( 'large-title' ) ?>"></td>
 					<?php } ?>
 						<td valign="center" class="large-title-text"><h1><?php show_cmb_value( 'large-title' ) ?></h1></td>
 					</tr>
