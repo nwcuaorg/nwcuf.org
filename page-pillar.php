@@ -42,7 +42,7 @@ get_header();
 				?>
 		<article class="third">
 			<div class="col-content">
-				<img src="<?php print $a_work['image'] ?>" />
+				<img src="<?php print $a_work['image'] ?>" alt="<?php print $a_work['title'] ?>" />
 				<h4><?php print $a_work['title'] ?></h4>
 				<?php if ( !empty( $a_work['content'] ) ) { ?>
 				<p class="content"><?php print $a_work['content'] ?></p>
