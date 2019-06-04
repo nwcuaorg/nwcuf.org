@@ -26,7 +26,7 @@ function columns( $num=1 ) {
 			<article class="third">
 				<div class="col-content">
 					<?php if ( $page_id == 3296 && $num == 2 ) { ?><a href="<?php print $a_col['orange_link']; ?>"><?php } ?>
-					<?php if ( !empty( $a_col['image'] ) ) { ?><img src="<?php print $a_col['image'] ?>" /><?php } ?>
+					<?php if ( !empty( $a_col['image'] ) ) { ?><img src="<?php print $a_col['image'] ?>" alt="<?php print !empty( $a_col['title'] ) ? $a_col['title'] : 'Icon' ); ?>" /><?php } ?>
 					<?php if ( $page_id == 3296 && $num == 2 ) { ?></a><?php } ?>
 					<?php if ( !empty( $a_col['title'] ) ) { ?><h4><?php print $a_col['title'] ?></h4><?php } ?>
 					<?php if ( !empty( $a_col['content'] ) ) { ?><p class="content"><?php print apply_filters( 'the_content', $a_col['content'] ); ?></p><?php } ?>
