@@ -96,7 +96,7 @@ get_header();
 				?>
 			<article class="post-<?php print $article_cat; ?> <?php show_cmb_value( 'large-title-color' ); ?>">
 				<div class="article-thumbnail">
-					<img src="<?php print get_the_post_thumbnail_url( $a_post->ID, 'post-thumbnail' ); ?>" />
+					<img src="<?php print get_the_post_thumbnail_url( $a_post->ID, 'post-thumbnail' ); ?>" alt="Photo: <?php print $a_post->post_title ?>" />
 				</div>
 				<div class="article-content">
 					<h5><a href="<?php print $a_post->guid ?>"><?php print $a_post->post_title ?></a></h5>
