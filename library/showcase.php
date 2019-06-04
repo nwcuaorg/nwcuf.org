@@ -21,7 +21,7 @@ function the_showcase( $color = 'grey' ) {
 				// check if it's an image or video
 				if ( p_is_image( $slide["image"] ) ) {
 					// it's an image, so resize it and generate an img tag.
-					$image = '<img src="' . $slide["image"] . '">';
+					$image = '<img src="' . $slide["image"] . '" alt="' . ( !empty( $title ) ? $title : 'Slideshow image/' ) . '">';
 				} else {
 					// it's a video, so oEmbed that stuffs, yo
 					$image = apply_filter( 'the_content', $slide["image"] );
