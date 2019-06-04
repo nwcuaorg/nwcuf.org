@@ -16,7 +16,7 @@ get_header();
 			<section class="first <?php show_cmb_value( 'home_third_1_color', 'navy' ) ?>">
 				<?php if ( has_cmb_value( 'home_third_1_url' ) ) { ?><a href="<?php show_cmb_value( 'home_third_1_url', '#' ) ?>"><?php } ?>
 				<div class="solid">
-					<img src="<?php show_cmb_value( 'home_third_1_icon', get_bloginfo( 'template_url' ) . '/img/icon-temp.png' ) ?>" />
+					<img src="<?php show_cmb_value( 'home_third_1_icon', get_bloginfo( 'template_url' ) . '/img/icon-temp.png' ) ?>" alt="<?php show_cmb_value( 'home_third_1_title', 'Left<br> Title' ) ?>" />
 					<h3><?php show_cmb_value( 'home_third_1_title', 'Left<br> Title' ) ?></h3>
 					<p><?php show_cmb_value( 'home_third_1_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ); ?></p>
 				</div>
@@ -31,7 +31,7 @@ get_header();
 				<?php if ( has_cmb_value( 'home_third_2_url' ) ) { ?><a href="<?php show_cmb_value( 'home_third_2_url', '#' ) ?>"><?php } ?>
 				<div class="solid">
 					<img src="<?php show_cmb_value( 'home_third_2_icon', get_bloginfo( 'template_url' ) . '/img/icon-temp.png' ) ?>" />
-					<h3><?php print str_replace( '*', '<br>', get_cmb_value( 'home_third_2_title' ) ) ?></h3>
+					<h3><?php show_cmb_value( 'home_third_2_title', 'Center<br> Title' ) ?></h3>
 					<p><?php show_cmb_value( 'home_third_2_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ); ?></p>
 				</div>
 				<div class="light">
@@ -44,7 +44,7 @@ get_header();
 			<section class="last <?php show_cmb_value( 'home_third_3_color', 'teal' ) ?>">
 				<?php if ( has_cmb_value( 'home_third_3_url' ) ) { ?><a href="<?php show_cmb_value( 'home_third_3_url', '#' ) ?>"><?php } ?>
 				<div class="solid">
-					<img src="<?php show_cmb_value( 'home_third_3_icon', get_bloginfo( 'template_url' ) . '/img/icon-temp.png' ) ?>" />
+					<img src="<?php show_cmb_value( 'home_third_3_icon', get_bloginfo( 'template_url' ) . '/img/icon-temp.png' ) ?>" alt="<?php show_cmb_value( 'home_third_3_title', 'Right<br> Title' ) ?>" />
 					<h3><?php show_cmb_value( 'home_third_3_title', 'Right<br> Title' ) ?></h3>
 					<p><?php show_cmb_value( 'home_third_3_subtitle', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' ); ?></p>
 				</div>
