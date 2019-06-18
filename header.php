@@ -33,7 +33,7 @@
 
 		<nav role="navigation" class="menu">
 			<button class="menu-toggle"><i class="fa fa-bars"></i></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'main', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav>
 
 		<nav role="buttons" class="buttons group">
