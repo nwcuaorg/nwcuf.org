@@ -292,6 +292,53 @@ function page_metaboxes( $meta_boxes ) {
 
 
 
+    // showcase metabox
+    $showcase_footer_metabox = new_cmb2_box( array(
+        'id' => 'showcase_footer_metabox',
+        'title' => 'Footer Showcase',
+        'object_types' => array( 'page' ), // post type
+        'show_on' => array(
+            'key' => 'template',
+            'value' => array( "page-front" )
+        ),
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $showcase_footer_metabox_group = $showcase_footer_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'showcase-footer',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Slide', 'cmb2'),
+            'remove_button' => __('Remove Slide', 'cmb2'),
+            'group_title'   => __( 'Slide {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $showcase_footer_metabox->add_group_field( $showcase_footer_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+    ) );
+
+    $showcase_footer_metabox->add_group_field( $showcase_footer_metabox_group, array(
+        'name' => 'Link',
+        'id'   => 'link',
+        'type' => 'text',
+        'sanitization_cb' => 'cmb2_relative_urls',
+    ) );
+
+    $showcase_footer_metabox->add_group_field( $showcase_footer_metabox_group, array(
+        'name' => 'Image/Video',
+        'id'   => 'image',
+        'type' => 'file',
+        'sanitization_cb' => 'cmb2_relative_urls',
+        'preview_size' => array( 200, 100 )
+    ) );
+
+
+
     // job metabox
     $job_metabox = new_cmb2_box( array(
         'id' => 'job_metabox',

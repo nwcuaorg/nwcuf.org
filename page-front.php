@@ -67,6 +67,8 @@ get_header();
 		?>
 	</div>
 
+	<?php the_footer_showcase(); ?>
+
 	<div class="footer-articles">
 		<div class="wrap group">
 		<?php 

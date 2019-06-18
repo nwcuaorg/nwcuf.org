@@ -21,10 +21,7 @@ $theme_options = get_option( 'pure_options' );
 			<div class="third">
 				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="NWCUF Logo"></a>
 				<nav role="navigation">
-					<?php wp_nav_menu( array( 
-						'theme_location' => 'main-menu', 
-						'menu_class' => 'nav-menu' ) 
-					); ?>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-links' )  ); ?>
 				</nav>
 				<div class="social">
 					<a href="<?php print $theme_options['social-twitter'] ?>" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/social-twitter.png" alt="Visit our Twitter Page" /></a>
