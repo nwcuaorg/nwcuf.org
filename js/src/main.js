@@ -36,6 +36,17 @@ jQuery(document).ready(function($){
 
 	});
 
+
+	// off-site link handling.
+	$( '.content a' ).each(function(){
+		if ( !$( this ).attr( 'href' ).match( '/nwcuf.org/g' ) && 
+			 !$( this ).attr( 'href' ).match( '/nwcuf.test/g' ) && 
+			( $( this ).attr( 'href' ).match( 'http://') || $( this ).attr( 'href' ).match( 'https://') ) ) {
+			$( this ).attr( 'target', '_blank' );
+		}
+	});	
+
+
 	// accordion box bindings
 	$( '.accordion-box-title' ).click(function(){
 		$( this ).parent( '.accordion-box' ).children( '.accordion-box-content' ).slideToggle( 600 );
