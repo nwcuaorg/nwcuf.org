@@ -40,6 +40,7 @@ jQuery(document).ready(function($){
 	// off-site link handling.
 	$( '.content a' ).each(function(){
 		if ( !$( this ).attr( 'href' ).match( '/nwcuf.org/g' ) && 
+			 !$( this ).attr( 'href' ).match( '/nwcuf.giraph.io/g' ) && 
 			 !$( this ).attr( 'href' ).match( '/nwcuf.test/g' ) && 
 			( $( this ).attr( 'href' ).match( 'http://') || $( this ).attr( 'href' ).match( 'https://') ) ) {
 			$( this ).attr( 'target', '_blank' );
