@@ -70,6 +70,7 @@
 				@include font-medium;
 				text-transform: uppercase;
 				color: black;
+				letter-spacing: 0.5px;
 
 				font-size: 25px;
 				@include respond-to( 768px ) { font-size: 30px; }
