@@ -33,7 +33,7 @@ get_header(); ?>
 			</div>
 		</div>
 	<div class="wrap content-wide">
-		<p>Read the latest updates from the Northwest Credit Union Foundation.</p><br>
+		<p>Read the latest news from credit unions around the Northwest.</p><br>
 
 		<div class="articles-listing">
 		<?php
