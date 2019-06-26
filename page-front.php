@@ -71,6 +71,9 @@ get_header();
 
 	<div class="footer-articles">
 		<div class="wrap group">
+			<div class="section-title">
+				<h3>Credit Unions Making a Difference</h3>
+			</div>
 		<?php 
 		$sticky = get_option( 'sticky_posts' );
 		$args = array(

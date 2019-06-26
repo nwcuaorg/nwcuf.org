@@ -3,6 +3,10 @@
 .footer-articles {
 	background: lighten( $grey, 45% );
 
+	.section-title {
+		padding: 15px 0 0 20px;
+	}
+
 	article {
 		background: white;
 
