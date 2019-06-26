@@ -69,11 +69,13 @@ get_header();
 
 	<?php the_footer_showcase(); ?>
 
+	<div class="work-title bg-white">
+		<div class="wrap">
+			<h2>The Credit Union Difference</h2>
+		</div>
+	</div>
 	<div class="footer-articles">
 		<div class="wrap group">
-			<div class="section-title">
-				<h3>Credit Unions Making a Difference</h3>
-			</div>
 		<?php 
 		$sticky = get_option( 'sticky_posts' );
 		$args = array(

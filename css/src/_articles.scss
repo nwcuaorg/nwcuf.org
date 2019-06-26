@@ -1,11 +1,12 @@
 
 
+.article-section-title {
+	padding: 20px 0 10px;
+	text-align: center;
+}
+
 .footer-articles {
 	background: lighten( $grey, 45% );
-
-	.section-title {
-		padding: 15px 0 0 20px;
-	}
 
 	article {
 		background: white;

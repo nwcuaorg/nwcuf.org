@@ -64,6 +64,16 @@
 			background: rgba( white, .5 );
 		}
 	}
+
+	&.bg-white h2 {
+		&:before {
+			background: rgba( black, .3 );
+		}
+
+		&:after {
+			background: rgba( black, .3 );
+		}
+	}
 }
 
 
