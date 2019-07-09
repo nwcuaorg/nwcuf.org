@@ -41,7 +41,6 @@ jQuery(document).ready(function($){
 	$( '.content a' ).each(function(){
 		if ( typeof( $( this ).attr( 'href' ) ) != 'undefined' ) {
 			if ( !$( this ).attr( 'href' ).match( '/nwcuf.org/g' ) && 
-				 !$( this ).attr( 'href' ).match( '/nwcuf.giraph.io/g' ) && 
 				 !$( this ).attr( 'href' ).match( '/nwcuf.test/g' ) && 
 				( $( this ).attr( 'href' ).match( 'http://') || $( this ).attr( 'href' ).match( 'https://') ) ) {
 				$( this ).attr( 'target', '_blank' );
