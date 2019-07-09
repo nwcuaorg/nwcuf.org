@@ -27,7 +27,7 @@
 
 		<div class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png" alt="<?php bloginfo( 'name' ); ?>">
+				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png?v=1" alt="<?php bloginfo( 'name' ); ?>">
 			</a>
 		</div>
 

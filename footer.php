@@ -19,7 +19,7 @@ $theme_options = get_option( 'pure_options' );
 	<footer class="footer">
 		<div class="wrap group">
 			<div class="third">
-				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png" alt="NWCUF Logo"></a>
+				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png?v=1" alt="NWCUF Logo"></a>
 				<nav role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'footer' )  ); ?>
 				</nav>
