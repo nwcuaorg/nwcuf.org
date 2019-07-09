@@ -70,7 +70,7 @@
 				@include font-medium;
 				text-transform: uppercase;
 				color: black;
-				letter-spacing: 1px;
+				letter-spacing: 1.5px;
 				word-spacing: 2px;
 
 				font-size: 25px;
@@ -114,8 +114,8 @@
 				top: 120px;
 
 				body.home & {
-					left: 15%;
-					right: 15%;					
+					left: 13%;
+					right: 13%;					
 				}
 			}
 			
