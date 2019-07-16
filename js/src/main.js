@@ -140,7 +140,7 @@ jQuery(document).ready(function($){
     $('input[type=submit].gform_button').on('click', function(event){
        
 		var submitCopy = $(this).clone();
-		submitCopy.prop('id', '').prop('disabled', true).prop('value', 'Submitting...').insertAfter($(this));
+		submitCopy.prop('id', '').prop('disabled', true).css('background-color','#ccc').prop('value', 'Submitting...').insertAfter($(this));
 
 		$(this).hide();
        
