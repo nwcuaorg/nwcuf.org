@@ -137,6 +137,7 @@ jQuery(document).ready(function($){
 	// set column heights on resize
 	$(window).resize( monolith_sizes );
 
+	/*
     $('input[type=submit].gform_button').on('click', function(event){
        
 		var submitCopy = $(this).clone();
@@ -145,6 +146,7 @@ jQuery(document).ready(function($){
 		$(this).hide();
        
     });
+    */
 
 });
 
