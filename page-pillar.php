@@ -6,6 +6,8 @@ Template Name: Pillar
 
 get_header();
 
+$page_id = get_the_ID();
+
 ?>
 
 	<?php the_showcase( get_cmb_value( 'large-title-color' ) ); ?>
@@ -84,7 +86,7 @@ get_header();
 		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 		<div class="wrap">
-			<h2>Our Stories</h2>
+			<h2><?php print ( $page_id == 4269 ? 'Member Support' : 'Our Stories' ); ?></h2>
 		</div>
 	</div>
 
