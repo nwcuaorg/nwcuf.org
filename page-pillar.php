@@ -86,7 +86,7 @@ $page_id = get_the_ID();
 		?>
 	<div class="work-title bg-<?php show_cmb_value( 'large-title-color' ) ?>">
 		<div class="wrap">
-			<h2><?php print ( $page_id == 4269 ? 'Member Support' : 'Our Stories' ); ?></h2>
+			<h2><?php print ( $page_id == 4269 ? 'Member Response' : 'Our Stories' ); ?></h2>
 		</div>
 	</div>
 
