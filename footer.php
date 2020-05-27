@@ -35,7 +35,7 @@ $theme_options = get_option( 'pure_options' );
 				<div class="column">
 					<p>800.995.9064 Phone<br>
 						877.928.6397 Fax<br>
-						<a href="mailto:foundation@nwcua.org">foundation@nwcua.org</a></p>
+						<a href="mailto:foundation@nwcuf.org">foundation@nwcuf.org</a></p>
 
 					<p><strong>Idaho Office</strong><br>
 						2710 W Sunrise Rim Road, Suite 100<br>
