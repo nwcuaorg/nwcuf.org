@@ -41,4 +41,16 @@ add_filter( 'gform_notification_3', 'friends_add_confirmation_code', 10, 3 );
 add_action( 'gform_after_submission_3', 'friends_post_redirect', 10, 2 );
 
 
+// ensure the address fields (when using United States address formats) use the abbreviation for the value of the state
+add_filter( 'gform_us_states', 'us_states' );
+function us_states( $states ) {
+    $new_states = array();
+    foreach ( $states as $state ) {
+        $new_states[ GF_Fields::get( 'address' )->get_us_state_code( $state ) ] = $state;
+    }
+ 
+    return $new_states;
+}
+
+
 ?>
