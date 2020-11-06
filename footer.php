@@ -33,7 +33,7 @@ $theme_options = get_option( 'pure_options' );
 
 				<h3>Connect With Us</h3>
 				<div class="column">
-					<p>800.995.9064 Phone<br>
+					<p>206.340.4829 Phone<br>
 						877.928.6397 Fax<br>
 						<a href="mailto:foundation@nwcua.org">foundation@nwcua.org</a></p>
 
