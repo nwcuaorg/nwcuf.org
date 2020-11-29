@@ -125,3 +125,12 @@
 	display: none !important;
 }
 
+
+#gform_44 .ginput_container.error {
+	border: 3px solid #790000;
+	border-left: 0;
+	border-right: 0;
+	background: rgba( 255, 223, 224, .25 );
+	padding: 10px;
+	display: none;
+}
