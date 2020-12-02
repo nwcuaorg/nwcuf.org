@@ -33,8 +33,8 @@ jQuery(document).ready(function($){
     // if we're on fotf step 2 on the becu form.
     if ( $('#gform_51').length > 0 ) {
 
-        // when the state field changes
-        $("#gform_51_4_4 select option[value='SC']").remove();
+        // just remove SC from the state list altogether
+        $("#gform_51 option[value='SC']").remove();
 
     }
 
