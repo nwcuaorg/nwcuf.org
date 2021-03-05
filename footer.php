@@ -40,6 +40,8 @@ $theme_options = get_option( 'pure_options' );
 					<p><strong>Idaho Office</strong><br>
 						2710 W Sunrise Rim Road, Suite 100<br>
 						Boise, ID 83705</p>
+
+					<p><a href="https://nwcua.org"><img src="<?php bloginfo( 'template_url' ); ?>/img/logo-nwcua-white.png" class="nwcua-logo" /></a></p>
 				</div>
 				<div class="column">
 					<p><strong>Oregon Office</strong><br>
