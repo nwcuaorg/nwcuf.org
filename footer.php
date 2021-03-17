@@ -33,24 +33,11 @@ $theme_options = get_option( 'pure_options' );
 
 				<h3>Connect With Us</h3>
 				<div class="column">
-					<p>206.340.4829 Phone<br>
-						877.928.6397 Fax<br>
-						<a href="mailto:foundation@nwcua.org">foundation@nwcua.org</a></p>
-
-					<p><strong>Idaho Office</strong><br>
-						2710 W Sunrise Rim Road, Suite 100<br>
-						Boise, ID 83705</p>
-
+					<?php print do_shortcode( '[snippet slug="footer-address-one" /]' ); ?>
 					<p><a href="https://nwcua.org"><img src="<?php bloginfo( 'template_url' ); ?>/img/logo-nwcua-white.png?v=1" class="nwcua-logo" /></a></p>
 				</div>
 				<div class="column">
-					<p><strong>Oregon Office</strong><br>
-						13221 SW 68th Pkwy, Suite 400<br>
-						Tigard, OR 97223</p>
-
-					<p><strong>Washington Office</strong><br>
-						18000 International Blvd, Suite 350<br>
-						Seattle, WA 98188</p>
+					<?php print do_shortcode( '[snippet slug="footer-address-two" /]' ); ?>
 				</div>
 
 			</div>
