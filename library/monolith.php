@@ -11,15 +11,15 @@ function columns( $num=1 ) {
 		</div>
 	</div>
 
+	<?php if ( has_cmb_value( 'columns_' . $num . '_content' ) ) { ?>
 	<div class="wrap">
 		<div class="content-wide columns-content">
 			<?php print apply_filters( 'the_content', get_cmb_value( 'columns_' . $num . '_content' ) ); ?>
 		</div>
 	</div>
+	<?php } ?>
 	<div class="our-work group">
 		<div class="wrap">
-			<?php if ( has_cmb_value( 'columns_' . $num . '_content' ) ) { ?>
-			<?php } ?>
 
 		<?php
 		if ( !empty( $cols ) ) {
