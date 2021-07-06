@@ -11,19 +11,21 @@ function columns( $num=1 ) {
 		</div>
 	</div>
 
+	<div class="wrap">
+		<div class="content-wide columns-content">
+			<?php print apply_filters( 'the_content', get_cmb_value( 'columns_' . $num . '_content' ) ); ?>
+		</div>
+	</div>
 	<div class="our-work group">
 		<div class="wrap">
 			<?php if ( has_cmb_value( 'columns_' . $num . '_content' ) ) { ?>
-			<div class="content-wide columns-content">
-				<?php print apply_filters( 'the_content', get_cmb_value( 'columns_' . $num . '_content' ) ); ?>
-			</div>
 			<?php } ?>
 
 		<?php
 		if ( !empty( $cols ) ) {
 			foreach ( $cols as $a_col ) { 
 				?>
-			<article class="third">
+			<article class="column">
 				<div class="col-content">
 					<?php if ( $page_id == 3296 && $num == 2 ) { ?><a href="<?php print $a_col['orange_link']; ?>"><?php } ?>
 					<?php if ( !empty( $a_col['image'] ) ) { ?><img src="<?php print $a_col['image'] ?>" alt="<?php print ( !empty( $a_col['title'] ) ? $a_col['title'] : 'Icon' ); ?>" /><?php } ?>
