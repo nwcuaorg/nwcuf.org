@@ -96,10 +96,6 @@
 			flex-wrap: wrap;
 		}
 
-		@include respond-to( 1150px ) {
-			flex-wrap: nowrap;
-		}
-
 		.column {
 			position: relative;
 			padding: 20px 20px 70px 20px;
