@@ -78,7 +78,7 @@
 
 
 .our-work {
-	padding: 20px 0;
+	padding: 20px 0 30px;
 	text-align: center;
 
 	article {
@@ -90,23 +90,56 @@
 		padding: 10px 30px;
 	}
 
-	.buttons {
-		a {
-			margin: 5px 0;
+	.wrap {
+		@include respond-to( 768px ) {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
-			@include button;
+		@include respond-to( 1150px ) {
+			flex-wrap: nowrap;
+		}
 
-			&:hover {
-				color: white;
-				opacity: .8;
+		.column {
+			position: relative;
+			padding: 20px 20px 70px 20px;
+
+			@include respond-to( 768px ) {
+				flex-basis: 50%;
 			}
 
-			&.orange {
-				background: $orange;
-				color: black;
+			@include respond-to( 1150px ) {
+				flex-basis: 33.3333%;
+			}
 
-				&:hover {
-					color: black;
+			.col-header {
+				min-height: 175px;
+			}
+
+			.buttons {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+
+				a {
+					margin: 5px 0;
+
+					@include button;
+
+					&:hover {
+						color: white;
+						opacity: .8;
+					}
+
+					&.orange {
+						background: $orange;
+						color: black;
+
+						&:hover {
+							color: black;
+						}
+					}
 				}
 			}
 		}
@@ -117,4 +150,5 @@
 		color: $grey;
 		margin-top: 5px;
 	}
+
 }

@@ -42,13 +42,13 @@ $page_id = get_the_ID();
 		foreach ( $work as $a_work ) {
 			if ( !empty( $a_work['image'] ) && !empty( $a_work['title'] ) && !empty( $a_work['content'] ) ) { 
 				?>
-		<article class="third">
+		<article class="column">
 			<div class="col-content">
-				<img src="<?php print $a_work['image'] ?>" alt="<?php print $a_work['title'] ?>" />
-				<h4><?php print $a_work['title'] ?></h4>
-				<?php if ( !empty( $a_work['content'] ) ) { ?>
-				<p class="content"><?php print $a_work['content'] ?></p>
-				<?php } ?>
+				<div class="col-header">
+					<img src="<?php print $a_work['image'] ?>" alt="<?php print $a_work['title'] ?>" />
+					<h4><?php print $a_work['title'] ?></h4>
+				</div>
+				<?php if ( !empty( $a_work['content'] ) ) { print apply_filters( 'the_content', $a_work['content'] ); } ?>
 			</div>
 			<p class="buttons">
 				<?php if ( !empty( $a_work['orange_text'] ) && !empty( $a_work['orange_link'] ) ) { ?>
