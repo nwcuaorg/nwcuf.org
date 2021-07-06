@@ -60,7 +60,7 @@ get_header();
 		foreach ( $work as $a_work ) {
 			if ( !empty( $a_work['image'] ) ) { 
 				?>
-		<article class="third">
+		<article class="column">
 			<div class="col-content">
 				<img src="<?php print $a_work['image'] ?>" alt="<?php print $a_work['title'] ?>" />
 				<?php if ( !empty( $a_work['title'] ) ) { ?><h4><?php print $a_work['title'] ?></h4><?php } ?>
