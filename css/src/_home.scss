@@ -38,8 +38,9 @@ $icon-width: 70px;
 			padding: 20px;
 
 			h3 {
+				@include font-bold;
 				text-transform: uppercase;
-				font-size: 1.4em;
+				font-size: 1.2em;
 			}
 
 			@include respond-to( 768px ) {
@@ -48,7 +49,7 @@ $icon-width: 70px;
 
 			@include respond-to( $menu-bp ) {
 				height: 310px;
-				font-size: 1.4em;
+				font-size: 1.3em;
 				line-height: 1.3em;
 			}
 		}
