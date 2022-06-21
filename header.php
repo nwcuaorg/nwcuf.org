@@ -41,6 +41,8 @@
 </head>
 <body <?php body_class(); ?>>
 
+<?php the_notice_bar(); ?>
+
 <header>
 
 	<div class="wrap group">

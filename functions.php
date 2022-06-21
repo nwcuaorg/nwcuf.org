@@ -25,6 +25,7 @@ include( "library/showcase.php" );
 include( "library/accordion.php" );
 include( "library/monolith.php" );
 include( "library/articles.php" );
+include( "library/notice.php" );
 
 
 // include the friends of the foundation functionality
