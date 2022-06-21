@@ -1,0 +1,14 @@
+
+
+.lightbox-merger {
+	display: none;
+
+	.mfp-content & {
+		display: block;
+		width: 450px;
+		background: white;
+		padding: 30px;
+		margin: 0 auto;
+	}
+}
+
