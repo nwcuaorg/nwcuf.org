@@ -108,12 +108,6 @@ get_header();
 		</div>
 	</div>
 
-	<div class="lightbox-merger">
-		<h4>We've Moved!</h4>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet..</p>
-		<p><a href="https://gowestassociation.org/foundation/"><img src="https://gowestassociation.org/wp-content/themes/gwcua/img/logo-foundation.png" /></a></p>
-	</div>
-
 <?php 
 
 get_footer();

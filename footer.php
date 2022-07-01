@@ -11,11 +11,14 @@
 
 $theme_options = get_option( 'pure_options' );
 
-?>	
+?>
+
 		</div>
 
 	</section>
 	
+	<?php gowest_foundation_lightbox(); ?>
+
 	<footer class="footer">
 		<div class="wrap group">
 			<div class="third">
