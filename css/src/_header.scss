@@ -27,11 +27,13 @@ header {
 		}
 	}
 
+	/*
 	.admin-bar & {
 		@include respond-to( $menu-bp ) {
 			top: 32px;
 		}
 	}
+	*/
 
 	.logo {
 		text-align: center;
