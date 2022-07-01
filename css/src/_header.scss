@@ -12,10 +12,12 @@ header {
 
 	@include respond-to( $menu-bp ) {
 		padding-top: 0;
+		/*
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
+		*/
 		height: 100px;
 		background: rgba( $grey, .7 );
 		transition: background 1s ease-in-out;
@@ -33,16 +35,19 @@ header {
 
 	.logo {
 		text-align: center;
+		padding: 10px;
 
 		@include respond-to( $menu-bp ) {
 			position: absolute;
 			top: 10px;
 			left: 10px;
-			right: 80%;
+			right: 65%;
+			padding: 0;
+			padding-top: 10px;
 		}
 
 		@include respond-to( $menu-bp-large ) {
-			right: 81%;
+			right: 65%;
 			left: 20px;
 		}
 	}

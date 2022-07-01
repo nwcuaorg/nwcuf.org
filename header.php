@@ -16,7 +16,7 @@
 <![endif]-->
 
 <?php wp_head(); ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=38" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=39" rel="stylesheet" type="text/css">
 
 <!-- begin favicon -->
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -43,13 +43,14 @@
 
 <?php the_notice_bar(); ?>
 
+<?php gowest_foundation_bar(); ?>
 <header>
 
 	<div class="wrap group">
 
 		<div class="logo">
 			<a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<img src="<?php bloginfo( "template_url" ) ?>/img/logo.png?v=1" alt="<?php bloginfo( 'name' ); ?>">
+				<img src="<?php bloginfo( "template_url" ) ?>/img/logo-lockup.png" alt="<?php bloginfo( 'name' ); ?>">
 			</a>
 		</div>
 
