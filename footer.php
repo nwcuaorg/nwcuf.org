@@ -22,7 +22,7 @@ $theme_options = get_option( 'pure_options' );
 	<footer class="footer">
 		<div class="wrap group">
 			<div class="third">
-				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo.png?v=1" alt="NWCUF Logo"></a>
+				<a href="/"><img src="<?php bloginfo( 'template_url' ) ?>/img/logo-lockup.png" alt="NWCUF Logo"></a>
 				<nav role="navigation">
 					<?php wp_nav_menu( array( 'theme_location' => 'footer' )  ); ?>
 				</nav>
@@ -38,7 +38,7 @@ $theme_options = get_option( 'pure_options' );
 				<h3>Connect With Us</h3>
 				<div class="column">
 					<?php print do_shortcode( '[snippet slug="footer-address-one" /]' ); ?>
-					<p><a href="https://nwcua.org"><img src="<?php bloginfo( 'template_url' ); ?>/img/logo-nwcua-white.png?v=1" class="nwcua-logo" /></a></p>
+					<!--<p><a href="https://nwcua.org"><img src="<?php bloginfo( 'template_url' ); ?>/img/logo-nwcua-white.png?v=1" class="nwcua-logo" /></a></p>-->
 				</div>
 				<div class="column">
 					<?php print do_shortcode( '[snippet slug="footer-address-two" /]' ); ?>
