@@ -5,7 +5,7 @@
 require_once( 'cmb2/init.php' );
 
 
-define( 'CMB_PREFIX', '' );
+if ( !defined( 'CMB_PREFIX' ) ) define( 'CMB_PREFIX', '' );
 
 
 function cmb2_relative_urls( $value, $field_args, $field ) {
